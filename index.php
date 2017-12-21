@@ -17,7 +17,7 @@ get_header(); ?>
     <?php do_action('hotel_luxury_page_before_content'); ?>
 
 	<div id="primary" class="content-area row">
-        <div class="content-wrapper eight columns">
+        <div class="content-wrapper col-md-8">
             <main id="main" class="site-main">
 
             <?php

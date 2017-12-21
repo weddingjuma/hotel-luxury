@@ -85,7 +85,7 @@ class Hotel_Luxury_Elements_Upcoming_Events extends Widget_Base {
 						<a class="view-all" href="<?php echo esc_url( tribe_get_events_link() ); ?>"> <?php echo esc_attr( $settings['more_text'] ) ?> </a>
 					</div>
 					<div class="builder-item-content row">
-						<div class="twelve columns b0">
+						<div class="col-md-12">
 							<ul class="upcoming-events">
 								<?php
 								if ( $events ) :

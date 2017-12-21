@@ -11,7 +11,7 @@ get_header(); ?>
 
 
     <div class="row">
-        <div class="twelve columns b0">
+        <div class="col-md-12">
             <div class="page-title-wrapper">
 				<h1 class="page-title left "><?php the_archive_title(); ?></h1>
 				<div class="clear"></div>

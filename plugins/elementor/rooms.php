@@ -93,10 +93,10 @@ class Hotel_Luxury_Elements_Rooms extends Widget_Base {
 			[
 				'label' => __( 'Column Layout', 'hotel-luxury' ),
 				'type' => Controls_Manager::SELECT,
-				'default' => 'six',
+				'default' => '6',
 				'options' => [
-					'six' => __( '2', 'hotel-luxury' ),
-					'four' => __( '3', 'hotel-luxury' )
+					'6' => __( '2', 'hotel-luxury' ),
+					'4' => __( '3', 'hotel-luxury' )
 				]
 			]
 		);
@@ -189,7 +189,7 @@ class Hotel_Luxury_Elements_Rooms extends Widget_Base {
 						$filter_class[]= $term->slug;
 					}
 					?>
-						<div class="mix <?php echo $settings['column_layout'] . ' ' . esc_attr( join(' ', $filter_class ) ); ?> column b30">
+						<div class="mix col-md-<?php echo $settings['column_layout'] . ' ' . esc_attr( join(' ', $filter_class ) ); ?> column">
 							<div class="">
 								<a class="first-gallery-thumb" href="<?php the_permalink() ?>">
 									<?php the_post_thumbnail('hotel_luxury_medium') ; ?>

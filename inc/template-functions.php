@@ -206,7 +206,7 @@ if ( ! function_exists( 'hotel_luxury_display_page_title' ) ) {
 	    if ( !$hide_page_title && ( !is_home() || !is_single() )  ) {
 		    ?>
             <div class="row">
-                <div class="twelve columns b0">
+                <div class="col-md-12">
                     <?php if ( hotel_luxury_is_event() == true ) {} else { ?>
                     <div class="page-title-wrapper">
                         <h1 class="page-title left"><?php single_post_title(); ?> </h1>
@@ -299,7 +299,7 @@ if ( ! function_exists( 'hotel_luxury_display_title_bar' ) ) {
                 <div class="titlebar-outer-wrapper" <?php echo $css; ?> >
                     <div class="container">
                         <div class="row">
-                            <div class="twelve columns b0">
+                            <div class="col-md-12">
                                 <?php if ( $titlebar_title ) : ?>
                                 <div class="titlebar-title">
                                     <h1><?php echo $titlebar_title ?></h1>

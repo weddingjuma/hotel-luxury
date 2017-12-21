@@ -273,7 +273,7 @@ img { -ms-interpolation-mode: bicubic;border: 0;vertical-align:middle;height: au
 .slideMenu ul li a.selected{ background: black; }
 .slideMenu ul li a:hover{/*background of menu items during onmouseover (hover state)*/}
 /*1st sub level menu*/
-.slideMenu ul li ul{position: absolute;left: 0;display: none; /*collapse all sub menus to begin with*/visibility: hidden;z-index: 100;}
+.slideMenu ul li ul{position: absolute;right: 0;display: none; /*collapse all sub menus to begin with*/visibility: hidden;z-index: 100;}
 /*Sub level menu list items (undo style from Top level List Items)*/
 .slideMenu ul li ul li{display: list-item;float: none;}
 /*All subsequent sub menu levels vertical offset after 1st level sub menu */
@@ -366,7 +366,7 @@ img { -ms-interpolation-mode: bicubic;border: 0;vertical-align:middle;height: au
 ----------------------------------------------------------------------------------------*/
 
 /* */
-.main-outer-wrapper{max-width: 1070px;background: #fff;margin:0 auto;-webkit-box-shadow:  0px 0px 4px 0px rgba(0, 0, 0, 0.1);-moz-box-shadow:  0px 0px 4px 0px rgba(0, 0, 0, 0.1);box-shadow:  0px 0px 4px 0px rgba(0, 0, 0, 0.1);padding-top:30px;position: relative;z-index:10;}
+.main-outer-wrapper{background: #fff;margin:0 auto;-webkit-box-shadow:  0px 0px 4px 0px rgba(0, 0, 0, 0.1);-moz-box-shadow:  0px 0px 4px 0px rgba(0, 0, 0, 0.1);box-shadow:  0px 0px 4px 0px rgba(0, 0, 0, 0.1);padding-top:30px;position: relative;z-index:10;}
 .main-outer-wrapper.has-slider{margin-top:-100px;}
 body.has-titlebar .main-outer-wrapper {margin-top:-65px;}
 body.no-titlebar .main-outer-wrapper {margin-top: 30px;}
@@ -763,7 +763,8 @@ a.banner-more:hover{color:#fff;}
 .banners .banner-image{}
 
 /* Subscribe Section */
-.subscribe_section{padding:40px 30px;background:#f5f5f5;margin:0px auto 0px;text-align:center;}
+.subscribe_section{padding:40px 30px;background:#f5f5f5; text-align:center;}
+.subscribe_section #subscribe_form{margin:0px auto 0px;}
 .subscribe_section input{border:none;}
 .subscribe_section .subs_email_input{padding:9px 9px;margin-right:15px;min-width: 200px;font-size: 12px;color:#555555;vertical-align: middle;background: #ffffff;}
 .subscribe_section .btn{margin-top:1px; margin-left: -20px}
@@ -897,6 +898,9 @@ p.buttons{margin-bottom:0px;}
 .footer-contact .f-phone span{color:#888888;}
 .footer-contact .f-mail{background: url('assets/images/icon-mail.png') no-repeat left 11px;}
 
+.footer-copyright-wrapper{
+    padding: 10px 0px;
+}
 .footer-copyright{padding-top:30px;}
 .footer-copyright .copy-left{font-size: 11px;text-transform: uppercase;}
 

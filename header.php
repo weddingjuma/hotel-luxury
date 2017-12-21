@@ -29,34 +29,36 @@
         <div class="top-bar-outer-wrapper">
             <div class="top-bar-wrapper container">
                 <div class="row">
-                    <div class="top-bar-left left">
-                        <nav id="top-nav-id" class="top-nav slideMenu">
-	                        <?php
-
-                            wp_nav_menu( array(
-                                'theme_location' => 'topbar',
-                                'menu_id'        => 'topbar-menu',
-                                'fallback_cb'    => 'link_to_menu_editor'
-                            ) );
-
-	                        ?>
-                        </nav>
+                    <div class="col-md-12">
+                        <div class="top-bar-left pull-left">
+                            <nav id="top-nav-id" class="top-nav slideMenu">
+    	                        <?php
+    
+                                wp_nav_menu( array(
+                                    'theme_location' => 'topbar',
+                                    'menu_id'        => 'topbar-menu',
+                                    'fallback_cb'    => 'link_to_menu_editor'
+                                ) );
+    
+    	                        ?>
+                            </nav>
+                        </div>
+    
+                        <?php if ( is_active_sidebar( 'topbar-right' ) ) { ?>
+                        <div class="top-bar-right text-right pull-right">
+    	                    <?php dynamic_sidebar( 'topbar-right' ); ?>
+                        </div>
+                        <?php } ?>
+                        <div class="clear"></div>
                     </div>
-
-                    <?php if ( is_active_sidebar( 'topbar-right' ) ) { ?>
-                    <div class="top-bar-right right">
-	                    <?php dynamic_sidebar( 'topbar-right' ); ?>
-                    </div>
-                    <?php } ?>
-                    <div class="clear"></div>
                 </div>
             </div><!-- END .top-bar-wrapper -->
         </div> <!-- END .top-bar-outer-wrapper -->
         <div class="header-outer-wrapper">
             <div class="header-wrapper container">
                 <div class="row">
-                    <div class="twelve columns b0">
-                        <div class="header-left left">
+                    <div class="col-md-12">
+                        <div class="header-left pull-left">
                             <div class="site-branding logo-wrapper">
                                 <?php the_custom_logo();
                                 if ( is_front_page() && is_home() ) : ?>
@@ -75,7 +77,7 @@
                                 ?>
                             </div>
                         </div>
-                        <div class="header-right right">
+                        <div class="header-right text-right pull-right">
 
                             <a href="#" id="primary-nav-mobile-a" class="primary-nav-close">
                                 <span></span>
@@ -103,8 +105,8 @@
     <?php  do_action('hotel_luxury_before_main_content');  ?>
 
 
-	<div id="content" class="main-outer-wrapper site-content">
-        <div class="main-wrapper container">
-            <div class="row row-wrapper">
+	<div id="content" class="main-outer-wrapper site-content container">
+        <div class="main-wrapper">
+            <div class="row-wrapper">
                 <div class="page-outer-wrapper">
-                    <div class="page-wrapper twelve columns no-sidebar b0">
+                    <div class="page-wrapper no-sidebar col-md-12">

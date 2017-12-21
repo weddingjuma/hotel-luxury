@@ -10,7 +10,7 @@ get_header();
     <?php do_action('hotel_luxury_page_before_content'); ?>
 
 	<div id="primary" class="content-area row">
-		<div class="content-wrapper twelve columns">
+		<div class="content-wrapper col-md-12">
 			<main id="main" class="site-main">
 
 				<?php
