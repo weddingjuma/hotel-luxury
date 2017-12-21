@@ -33,7 +33,7 @@
 }
 .woocommerce-message:before, .woocommerce-error:before, .woocommerce-info:before {
     content: "";
-    height: 1.5em;
+    height: 2.5em;
     width: 1.5em;
     display: block;
     position: absolute;
@@ -436,7 +436,7 @@ p.demo_store {
     float: none;
 }
 .woocommerce .related ul.products li.product, .woocommerce .related ul li.product, .woocommerce .upsells.products ul.products li.product, .woocommerce .upsells.products ul li.product, .woocommerce-page .related ul.products li.product, .woocommerce-page .related ul li.product, .woocommerce-page .upsells.products ul.products li.product, .woocommerce-page .upsells.products ul li.product {
-    width: 48%}
+    width: 25%}
 .woocommerce .related ul.products li.product img, .woocommerce .related ul li.product img, .woocommerce .upsells.products ul.products li.product img, .woocommerce .upsells.products ul li.product img, .woocommerce-page .related ul.products li.product img, .woocommerce-page .related ul li.product img, .woocommerce-page .upsells.products ul.products li.product img, .woocommerce-page .upsells.products ul li.product img {
     width: 100%;
     height: auto;
@@ -446,7 +446,7 @@ p.demo_store {
     margin: 0px 0px 30px 0px;
     padding: 0;
     position: relative;
-    width: 33.333%;
+    width: 25%;
     margin-left: 0;
     padding:0px 15px;
     text-align:center;

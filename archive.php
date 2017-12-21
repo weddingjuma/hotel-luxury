@@ -20,7 +20,7 @@ get_header(); ?>
     </div>
 
     <div id="primary" class="content-area row">
-        <div class="loop-posts eight columns">
+        <div class="loop-posts col-md-8">
             <main id="main" class="site-main">
 
 		<?php

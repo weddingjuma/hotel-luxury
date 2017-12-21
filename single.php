@@ -13,7 +13,7 @@ get_header(); ?>
 
 
     <div id="primary" class="content-area row">
-        <div class="content-wrapper eight columns">
+        <div class="content-wrapper col-md-8">
             <main id="main" class="site-main">
 
             <?php
