@@ -57,7 +57,7 @@ svg:not(:root) { overflow: hidden; }
 figure, form { margin: 0; }
 fieldset { border: 0; margin: 0; padding: 0; }
 legend { border: 0; margin-left: -7px; padding: 0; }
-label { cursor: pointer; }
+label { cursor: pointer; display: block;}
 button, input, select, textarea {margin: 0; vertical-align: baseline;}
 button, input { line-height: normal; }
 table button, table input {}
@@ -149,7 +149,7 @@ h1 small, h2 small, h3 small, h4 small, h5 small { color: #777; }
 /*Form
 ----------------------------------------------------------------------------------------*/
 fieldset{ padding:20px; border:1px solid #e0e0e0;}
-input[type=text],input[type=password],textarea{ color:#a9a9a9; padding:0.7em 10px; border:1px solid #f0f0f0; background:#f4f4f4;font-size: 12px;}
+input[type=text],input[type=password],input[type=email],input[type=url],input[type=tel], select, textarea{ color:#a9a9a9; padding:0.7em 10px; border:1px solid #f0f0f0; background:#f4f4f4;font-size: 12px;}
 textarea{ width:90%; font-size:13px; background:#f4f4f4; overflow:auto; -webkit-border-radius: 2px; -moz-border-radius: 2px; border-radius: 2px;color:#a9a9a9;margin-top:3px;line-height: 24px;min-height: 100px;}
 input, textarea,input[type="submit"]:focus{outline:0 none;}
 input[type="radio"],input[type="checkbox"]{margin-right:10px; margin-left:10px;}
