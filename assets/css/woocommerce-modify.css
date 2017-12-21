@@ -143,9 +143,12 @@ p.demo_store {
 }
 .woocommerce .col2-set .col-1, .woocommerce-page .col2-set .col-1 {
     float: left;
-    width: 48%}
+    max-width: 100%;
+    width: 48%
+}
 .woocommerce .col2-set .col-2, .woocommerce-page .col2-set .col-2 {
     float: right;
+    max-width: 100%;
     width: 48%}
 .woocommerce div.product, .woocommerce #content div.product, .woocommerce-page div.product, .woocommerce-page #content div.product {
     margin-bottom: 0;
