@@ -26,6 +26,7 @@ Hotel Luxury includes support for Elementor and The Event Calendar plugins.
 * MixItUp License, CC ( http://creativecommons.org/licenses/by-nc/3.0/)  https://www.kunkalabs.com/mixitup/licenses/
 * Magnific Popup License, MIT. http://dimsemenov.com/plugins/magnific-popup/
 * Owl Carousel, Licensed under MIT. https://owlcarousel2.github.io/OwlCarousel2/
+* Bootstrap, Licensed under MIT. https://github.com/twbs/bootstrap/blob/master/
 
 === Images ===
 

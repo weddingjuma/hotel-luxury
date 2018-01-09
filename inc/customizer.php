@@ -224,29 +224,6 @@ function hotel_luxury_customize_register( $wp_customize ) {
 	);
 
 
-	// Sidebar layout
-	$wp_customize->add_section('sidebar_layout', array(
-		'title' => esc_html__('Layout', 'hotel-luxury'),
-		'panel' => 'theme_options',
-		'priority' => 25
-	));
-	$wp_customize->add_setting( 'page_layout', array(
-		'default'              => 'right',
-		'sanitize_callback'    => 'sanitize_text_field',
-	) );
-	$wp_customize->add_control(
-		'page_layout',
-		array(
-			'label'      => esc_html__( 'Page Layout', 'hotel-luxury' ),
-			'section'    => 'sidebar_layout',
-			'type'       => 'select',
-			'choices'    => array(
-				'right' => esc_html__( 'Right sidebar', 'hotel-luxury' ),
-				'left' => esc_html__( 'Left sidebar', 'hotel-luxury' ),
-			)
-		)
-	);
-
 	$wp_customize->add_setting( 'primary_color', array(
 		'default' 			     => '#bca474',
 		'sanitize_callback'		 => 'sanitize_hex_color_no_hash'

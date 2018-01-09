@@ -23,7 +23,7 @@ $event_id = get_the_ID();
 ?>
 <div class="row">
 
-    <div class="eight columns">
+    <div class="col-md-8">
 
         <div id="tribe-events-content" class="tribe-events-single">
 
