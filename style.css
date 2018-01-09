@@ -703,6 +703,35 @@ a.banner-more:hover{color:#fff;}
 .boston-posts-widget .widget-posts li {
     padding: 10px 0px 13px;
 }
+.sidebar{}
+.sidebar .widget{
+    float: left;
+    margin-bottom: 30px;
+    width: 100%;
+}
+.sidebar .widget .widget-title{
+    background: url('assets/images/doted-divider.png') repeat-x bottom left;
+    margin-bottom: 20px;
+    padding-bottom: 12px;
+}
+.sidebar .widget .search-form{
+    float: left;
+    position: relative;
+    width: 100%;
+}
+.sidebar .widget .search-form input.search-field{
+    float: left;
+    margin-bottom: 12px;
+    padding: 7px 15px;
+    width: 100%;
+}
+.sidebar .widget ul{}
+.sidebar .widget ul li{
+    float: left;
+    display: block;
+    margin-bottom: 10px;
+    width: 100%;
+}
 
 /* Twitter Update Widget */
 ul.twitter_list{margin-bottom:0px;}
