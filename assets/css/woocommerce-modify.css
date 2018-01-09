@@ -422,6 +422,7 @@ p.demo_store {
 .woocommerce .products ul, .woocommerce ul.products,
 .woocommerce-page .products ul, .woocommerce-page ul.products {
     -webkit-box-sizing: border-box; -moz-box-sizing: border-box; box-sizing: border-box;
+    margin: 0 -15px;
 }
 .woocommerce .products ul li, .woocommerce ul.products li, .woocommerce-page .products ul li, .woocommerce-page ul.products li {
     list-style: none outside;

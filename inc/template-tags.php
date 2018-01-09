@@ -170,10 +170,13 @@ function hotel_luxury_custom_style(){
 	$footer_bg_color = esc_attr( get_theme_mod( 'footer_bg_color', '202020' ) );
 	$footer_text_color = esc_attr( get_theme_mod( 'footer_text_color', '666' ) );
 
+	$copyright_bg_color = esc_attr( get_theme_mod( 'footer_copyright_color', '222222' ) );
+	$copyright_text_color = esc_attr( get_theme_mod( 'copyright_text_color', '666' ) );
 
 	$css .= ".site-footer { background: #{$footer_bg_color}; }
 			.site-footer, .site-footer a, .widget-container .footer-widgettitle { color: #{$footer_text_color}; }
-			
+			.footer-copyright-wrapper { background: #{$copyright_bg_color}; }
+			.footer-copyright-wrapper, .footer-copyright-wrapper a { color: #{$copyright_text_color}; }
 			a,
 			.primary-nav ul li.current-menu-item a,
 			.primary-nav ul li a:hover {

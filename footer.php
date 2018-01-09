@@ -10,10 +10,7 @@
  */
 
 ?>
-                    </div><!-- .page-wrapper -->
-                </div><!-- .page-outer-wrapper -->
-                <div class="clear"></div>
-            </div><!-- .row -->
+
         </div><!-- .main-wrapper -->
 
         <?php
@@ -59,27 +56,33 @@
 	                }
 	                ?>
                 </div>
-                <div class="clear"></div>
-            </div>
-            <div class="footer-copyright-wrapper row">
-                <div class="col-md-12">
-                    <div class="footer-copyright">
-                        <div class="copy-left pull-left">
-                            <?php do_action( 'hotel_luxury_footer_copyright' ); ?>
-                        </div>
 
-                        <?php if ( has_nav_menu( 'social' ) ) { ?>
-                        <div class="social-links pull-right">
-                            <?php wp_nav_menu( array( 'theme_location' => 'social', 'menu_class' => 'footer-social', 'link_before' => '<span class="screen-reader-text">',  'link_after'   => '</span>') ) ; ?>
-                        </div>
-                        <?php } ?>
-
-                        <div class="clear"></div>
-                    </div>
-                </div>
-                <div class="clear"></div>
             </div>
         </div> <!-- END .footer-wrapper -->
+
+        <div class="footer-copyright-wrapper">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-12">
+                        <div class="footer-copyright">
+                            <div class="copy-left pull-left">
+				                <?php do_action( 'hotel_luxury_footer_copyright' ); ?>
+                            </div>
+
+			                <?php if ( has_nav_menu( 'social' ) ) { ?>
+                                <div class="social-links pull-right">
+					                <?php wp_nav_menu( array( 'theme_location' => 'social', 'menu_class' => 'footer-social', 'link_before' => '<span class="screen-reader-text">',  'link_after'   => '</span>') ) ; ?>
+                                </div>
+			                <?php } ?>
+
+                            <div class="clear"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
     </footer> <!-- END .footer-outer-wrapper -->
 
 </div><!-- #page -->

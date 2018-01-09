@@ -259,6 +259,24 @@ function hotel_luxury_customize_register( $wp_customize ) {
 		'section' 				 => 'footer',
 	) ) );
 
+	$wp_customize->add_setting( 'footer_copyright_color', array(
+		'default' 			     =>  '#000',
+		'sanitize_callback'		 => 'sanitize_hex_color_no_hash'
+	) );
+	$wp_customize->add_control( new WP_Customize_Color_Control( $wp_customize, 'footer_copyright_color', array(
+		'label' 				 => esc_html__( 'Copyright Background Color', 'hotel-luxury' ),
+		'section' 				 => 'footer',
+	) ) );
+
+	$wp_customize->add_setting( 'copyright_text_color', array(
+		'default' 			     => '#666',
+		'sanitize_callback'		 => 'sanitize_hex_color_no_hash'
+	) );
+	$wp_customize->add_control( new WP_Customize_Color_Control( $wp_customize, 'copyright_text_color', array(
+		'label' 				 => esc_html__( 'Copyright Text Color', 'hotel-luxury' ),
+		'section' 				 => 'footer',
+	) ) );
+
 
 
 	// if is free :
