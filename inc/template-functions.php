@@ -181,7 +181,7 @@ function hotel_luxury_get_featured_posts(){
 			</div>
 			<?php
 		endwhile;
-		echo '</div></div><div class="shadow-box"></div>';
+		echo '</div></div>';
 	}
 
 }
@@ -335,6 +335,6 @@ function hotel_luxury_hide_shop_page_title() {
  * Footer Copyright
  */
 function hotel_luxury_footer_info() {
-	echo sprintf( esc_html__( 'Copyright &copy; %1$s %2$s . All rights reserved.', 'hotel-luxury' ), date( 'Y' ), '<a href="'.esc_url( home_url( '/' ) ).'" title="'.esc_attr( get_bloginfo( 'name', 'display' ) ).'">'.esc_html( get_bloginfo( 'name', 'display' ) ).'</a>' );
+	echo sprintf( esc_html__( 'Copyright &copy; %1$s %2$s - %3$s theme by FilaThemes', 'hotel-luxury' ), date( 'Y' ), '<a href="'.esc_url( home_url( '/' ) ).'" title="'.esc_attr( get_bloginfo( 'name', 'display' ) ).'">'.esc_html( get_bloginfo( 'name', 'display' ) ).'</a>', '<a target="_blank" href="http://filathemes.com/hotel-luxury">Hotel Luxury</a>' );
 }
 add_action( 'hotel_luxury_footer_copyright', 'hotel_luxury_footer_info' );

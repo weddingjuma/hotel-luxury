@@ -17,13 +17,9 @@ get_header();
 		</div>
 	</div>
 
-	<div id="primary" class="content-area row">
-		<div class="content-wrapper  columns">
-			<main id="main" class="site-main">
-
+	<div class="row">
+		<div class="content-wrapper col-md-12">
 				<?php woocommerce_content(); ?>
-
-			</main><!-- #main -->
 		</div>
 	</div><!-- #primary -->
 

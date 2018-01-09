@@ -105,8 +105,4 @@
     <?php  do_action('hotel_luxury_before_main_content');  ?>
 
 
-	<div id="content" class="main-outer-wrapper site-content container">
-        <div class="main-wrapper">
-            <div class="row-wrapper">
-                <div class="page-outer-wrapper">
-                    <div class="page-wrapper no-sidebar col-md-12">
+	<div id="content" class="main-outer-wrapper container">
