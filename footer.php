@@ -67,11 +67,13 @@
                         <div class="copy-left pull-left">
                             <?php do_action( 'hotel_luxury_footer_copyright' ); ?>
                         </div>
+
                         <?php if ( has_nav_menu( 'social' ) ) { ?>
                         <div class="social-links pull-right">
                             <?php wp_nav_menu( array( 'theme_location' => 'social', 'menu_class' => 'footer-social', 'link_before' => '<span class="screen-reader-text">',  'link_after'   => '</span>') ) ; ?>
                         </div>
                         <?php } ?>
+
                         <div class="clear"></div>
                     </div>
                 </div>

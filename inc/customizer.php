@@ -38,42 +38,7 @@ function hotel_luxury_customize_register( $wp_customize ) {
 	));
 
 
-	// slider for home page
-	$wp_customize->add_setting( 'show_main_slider', array(
-		'sanitize_callback' => 'hotel_luxury_checkbox_sanitize',
-		'default'           => '1'
-	) );
 
-	$wp_customize->add_control( 'show_main_slider',
-		array(
-			'type'        => 'checkbox',
-			'label'       => esc_html__('Show Slider on Home page', 'hotel-luxury'),
-			'section'     => 'static_front_page',
-			'description' => ''
-		)
-	);
-
-	$wp_customize->add_setting( 'slide_tag_name', array(
-		'sanitize_callback' => 'sanitize_text_field',
-		'default'           => 'slider'
-	) );
-	$wp_customize->add_control( 'slide_tag_name',
-		array(
-			'label'       => esc_html__('Tag name', 'hotel-luxury'),
-			'section'     => 'static_front_page',
-			'description' => esc_html__('Easily feature all posts with the "slider" tag or a tag of your choice.', 'hotel-luxury')
-		)
-	);
-	$wp_customize->add_setting( 'slide_number_post', array(
-		'sanitize_callback' => 'sanitize_text_field',
-		'default'           => '3'
-	) );
-	$wp_customize->add_control( 'slide_number_post',
-		array(
-			'label'       => esc_html__('Number post to show', 'hotel-luxury'),
-			'section'     => 'static_front_page'
-		)
-	);
 
 
 	// Event
@@ -259,29 +224,6 @@ function hotel_luxury_customize_register( $wp_customize ) {
 	);
 
 
-	// Sidebar layout
-	$wp_customize->add_section('sidebar_layout', array(
-		'title' => esc_html__('Layout', 'hotel-luxury'),
-		'panel' => 'theme_options',
-		'priority' => 25
-	));
-	$wp_customize->add_setting( 'page_layout', array(
-		'default'              => 'right',
-		'sanitize_callback'    => 'sanitize_text_field',
-	) );
-	$wp_customize->add_control(
-		'page_layout',
-		array(
-			'label'      => esc_html__( 'Page Layout', 'hotel-luxury' ),
-			'section'    => 'sidebar_layout',
-			'type'       => 'select',
-			'choices'    => array(
-				'right' => esc_html__( 'Right sidebar', 'hotel-luxury' ),
-				'left' => esc_html__( 'Left sidebar', 'hotel-luxury' ),
-			)
-		)
-	);
-
 	$wp_customize->add_setting( 'primary_color', array(
 		'default' 			     => '#bca474',
 		'sanitize_callback'		 => 'sanitize_hex_color_no_hash'
@@ -336,6 +278,48 @@ function hotel_luxury_customize_register( $wp_customize ) {
 		)
 	);
 
+
+	// slider for home page
+	$wp_customize->add_section( 'main_slider', array(
+		'title' => esc_html__( 'Home Slider', 'hotel-luxury' ),
+		'panel' => 'theme_options'
+	));
+
+	$wp_customize->add_setting( 'show_main_slider', array(
+		'sanitize_callback' => 'hotel_luxury_checkbox_sanitize',
+		'default'           => '1'
+	) );
+
+	$wp_customize->add_control( 'show_main_slider',
+		array(
+			'type'        => 'checkbox',
+			'label'       => esc_html__('Show Slider on Home page', 'hotel-luxury'),
+			'section'     => 'main_slider',
+			'description' => ''
+		)
+	);
+
+	$wp_customize->add_setting( 'slide_tag_name', array(
+		'sanitize_callback' => 'sanitize_text_field',
+		'default'           => 'slider'
+	) );
+	$wp_customize->add_control( 'slide_tag_name',
+		array(
+			'label'       => esc_html__('Tag name', 'hotel-luxury'),
+			'section'     => 'main_slider',
+			'description' => esc_html__('Easily feature all posts with the "slider" tag or a tag of your choice.', 'hotel-luxury')
+		)
+	);
+	$wp_customize->add_setting( 'slide_number_post', array(
+		'sanitize_callback' => 'sanitize_text_field',
+		'default'           => '3'
+	) );
+	$wp_customize->add_control( 'slide_number_post',
+		array(
+			'label'       => esc_html__('Number post to show', 'hotel-luxury'),
+			'section'     => 'main_slider'
+		)
+	);
 
 	// Checkbox Sanitize
 	function hotel_luxury_checkbox_sanitize( $input ) {
