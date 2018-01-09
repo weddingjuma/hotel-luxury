@@ -1,19 +1,8 @@
-
 === Hotel Luxury ===
-
-Contributors: filathemes
-Tags: custom-logo, custom-menu, featured-images, threaded-comments, translation-ready, holiday
-
-Requires at least: 4.7
-Tested up to: 4.9
-Stable tag: 0.0.1
-License: GNU General Public License v2 or later
-License URI: http://www.gnu.org/licenses/gpl-2.0.html
-
-A starter theme called Hotel Luxury.
+Hotel Luxury, Copyright 2018 FilaThemes
+Hotel Luxury is distributed under the terms of the GNU GPL
 
 == Description ==
-
 Hotel Luxury is the most charming, luxurious and powerful WordPress theme for your spa, resort, hotel business, vacation room/apartment rental services. Its original goal is to help you easier manage your rooms listings, customer bookings and reservations online. With its beautiful design, and high coding quality, this theme can showcase your unique accommodations to the world and attract more visitors to your website.
 
 == Installation ==
@@ -26,7 +15,7 @@ Hotel Luxury is the most charming, luxurious and powerful WordPress theme for yo
 
 = Does this theme support any plugins? =
 
-Hotel Luxury includes support for Page Builder by SiteOrigin plugin.
+Hotel Luxury includes support for Elementor and The Event Calendar plugins.
 
 
 == Credits ==
@@ -36,7 +25,7 @@ Hotel Luxury includes support for Page Builder by SiteOrigin plugin.
 * Font Awesome Code License, MIT. http://opensource.org/licenses/mit-license.html
 * MixItUp License, CC ( http://creativecommons.org/licenses/by-nc/3.0/)  https://www.kunkalabs.com/mixitup/licenses/
 * Magnific Popup License, MIT. http://dimsemenov.com/plugins/magnific-popup/
-
+* Owl Carousel, Licensed under MIT. https://owlcarousel2.github.io/OwlCarousel2/
 
 === Images ===
 

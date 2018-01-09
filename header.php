@@ -55,7 +55,7 @@
             </div><!-- END .top-bar-wrapper -->
         </div> <!-- END .top-bar-outer-wrapper -->
         <div class="header-outer-wrapper">
-            <div class="header-wrapper container">
+            <div class="container">
                 <div class="row">
                     <div class="col-md-12">
                         <div class="header-left pull-left">

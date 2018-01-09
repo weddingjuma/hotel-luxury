@@ -95,8 +95,8 @@ class Hotel_Luxury_Elements_Rooms extends Widget_Base {
 				'type' => Controls_Manager::SELECT,
 				'default' => '6',
 				'options' => [
-					'6' => __( '2', 'hotel-luxury' ),
-					'4' => __( '3', 'hotel-luxury' )
+					'4' => __( '3', 'hotel-luxury' ),
+					'6' => __( '2', 'hotel-luxury' )
 				]
 			]
 		);

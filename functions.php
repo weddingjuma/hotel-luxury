@@ -48,7 +48,7 @@ if ( ! function_exists( 'hotel_luxury_setup' ) ) :
 		register_nav_menus( array(
 			'menu-1' => esc_html__( 'Primary', 'hotel-luxury' ),
 			'topbar' => esc_html__( 'Topbar', 'hotel-luxury' ),
-			'social' => esc_html__( 'Social Link', 'hotel-luxury' ),
+			'social' => esc_html__( 'Footer Social', 'hotel-luxury' ),
 		) );
 
 		/*
@@ -203,7 +203,6 @@ function hotel_luxury_scripts() {
 	wp_enqueue_style( 'owl.theme.default', get_template_directory_uri() . '/assets/css/owl.theme.default.min.css', array(), '2.2.1', '' );
 
 	wp_enqueue_style( 'hotel-luxury-style', get_stylesheet_uri() );
-	//wp_enqueue_style( 'responsive', get_template_directory_uri() . '/assets/css/responsive.css', array(), '0.0.1', '' );
 
 	wp_enqueue_script( 'jquery.magnific', get_template_directory_uri() . '/assets/js/jquery.magnific-popup.min.js', array( 'jquery' ), '1.1.0', true );
 	wp_enqueue_script( 'mixitup', get_template_directory_uri() . '/assets/js/mixitup.min.js', array( 'jquery' ), '3.2.1', true );

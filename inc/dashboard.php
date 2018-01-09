@@ -35,7 +35,7 @@ function hotel_luxury_theme_info_page() {
 
 		<h2 class="nav-tab-wrapper">
 			<a href="?page=hotel_luxury" class="nav-tab<?php echo is_null($tab) ? ' nav-tab-active' : null; ?>"><?php echo $theme_data->Name; ?></a>
-			<a href="?page=hotel_luxury&tab=demo-data-importer" class="nav-tab<?php echo $tab == 'demo-data-importer' ? ' nav-tab-active' : null; ?>"><?php esc_html_e( 'One Click Demo Import', 'hotel-luxury' ); ?></span></a>
+			<a href="?page=pt-one-click-demo-import" class="nav-tab<?php echo $tab == 'demo-data-importer' ? ' nav-tab-active' : null; ?>"><?php esc_html_e( 'One Click Demo Import', 'hotel-luxury' ); ?></span></a>
 		</h2>
 
 		<?php if ( is_null($tab) ) { ?>
