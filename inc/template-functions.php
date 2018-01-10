@@ -262,7 +262,7 @@ if ( ! function_exists( 'hotel_luxury_display_title_bar' ) ) {
             }
         }
 
-	    $show_main_slider = esc_attr( get_theme_mod('show_main_slider', 1) ) ;
+	    $show_main_slider = esc_attr( get_theme_mod('show_main_slider', 0 ) ) ;
 	    $show_titlebar_on_post = esc_attr( get_theme_mod('show_titlebar_on_post', 1) ) ;
 	    $show_titlebar_on_event = esc_attr( get_theme_mod('show_titlebar_on_event', 1) ) ;
 	    $show_titlebar_on_product = esc_attr( get_theme_mod('show_titlebar_on_product', 1) ) ;
