@@ -13,15 +13,7 @@
 .ehover11 .overlay::before,.ehover12 h2::after,.ehover7 .overlay::before {
   content: '';
 }
-body {
-  font-family: colaborate-thinregular,sans-serif;
-  letter-spacing: 2px;
-  text-transform: uppercase;
-  background-image: url(../images/back3.jpg);
-  background-size: cover;
-  background-repeat: no-repeat;
-  color: #FFF;
-}
+
 .modal-body p,pre {
   text-transform: none;
   letter-spacing: 0;
