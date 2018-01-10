@@ -157,11 +157,10 @@ class Hotel_Luxury_Elements_Rooms extends Widget_Base {
 					?>
 						<div class="mix col-md-<?php echo $settings['column_layout'] . ' ' . esc_attr( join(' ', $filter_class ) ); ?> column">
                             <div class="hover">
-                                <a class="first-gallery-thumb" href="<?php the_permalink() ?>">
-									<?php the_post_thumbnail('hotel_luxury_medium') ; ?>
-								</a>
+                                <?php the_post_thumbnail('hotel_luxury_medium') ; ?>
+
                                 <div class="overlay">                                    
-                                    <a href="<?php the_permalink() ?>" class="info"><i class="fa fa-link" aria-hidden="true"></i></a>
+                                    <a href="<?php the_permalink() ?>" class="info"><span><i class="fa fa-link" ></i></span></a>
                                 </div>
                             </div>                            
 							<div class="cpt-detail clearfix">
