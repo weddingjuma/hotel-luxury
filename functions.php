@@ -78,8 +78,8 @@ if ( ! function_exists( 'hotel_luxury_setup' ) ) :
 		 * @link https://codex.wordpress.org/Theme_Logo
 		 */
 		add_theme_support( 'custom-logo', array(
-			'height'      => 130,
-			'width'       => 100,
+			'height'      => 80,
+			'width'       => 200,
 			'flex-width'  => true,
 			'flex-height' => true,
 		) );
