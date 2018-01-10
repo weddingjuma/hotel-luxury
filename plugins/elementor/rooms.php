@@ -162,7 +162,7 @@ class Hotel_Luxury_Elements_Rooms extends Widget_Base {
 								</a>
                                 <div class="overlay">
                                     <h2><a href="<?php the_permalink() ?>"><?php the_title() ?></a></h2>
-                                    <a class="info"><i class="fa fa-link" aria-hidden="true"></i></a>
+                                    <a href="<?php the_permalink() ?>" class="info"><i class="fa fa-link" aria-hidden="true"></i></a>
                                 </div>
                             </div>                            
 							<div class="cpt-detail">
