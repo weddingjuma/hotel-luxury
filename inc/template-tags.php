@@ -183,6 +183,7 @@ function hotel_luxury_custom_style(){
 				color: #{$primary_color};
 			}
 			
+			.owl-theme .owl-dots .owl-dot.active span, .owl-theme .owl-dots .owl-dot:hover span,
 			#tribe-bar-form .tribe-bar-submit input[type=submit],
 			#main_slider  .owl-nav [class*=owl-],
 			input[type=\"reset\"], input[type=\"submit\"], input[type=\"button\"], button {
