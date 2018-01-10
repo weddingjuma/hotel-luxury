@@ -160,12 +160,11 @@ class Hotel_Luxury_Elements_Rooms extends Widget_Base {
                                 <a class="first-gallery-thumb" href="<?php the_permalink() ?>">
 									<?php the_post_thumbnail('hotel_luxury_medium') ; ?>
 								</a>
-                                <div class="overlay">
-                                    <h2><a href="<?php the_permalink() ?>"><?php the_title() ?></a></h2>
+                                <div class="overlay">                                    
                                     <a href="<?php the_permalink() ?>" class="info"><i class="fa fa-link" aria-hidden="true"></i></a>
                                 </div>
                             </div>                            
-							<div class="cpt-detail">
+							<div class="cpt-detail clearfix">
 								<h2 class="cpt-title">
 									<a href="<?php the_permalink() ?>"><?php the_title() ?></a>
 								</h2>
