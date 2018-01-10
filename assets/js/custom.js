@@ -19,6 +19,7 @@
 
     $('#main_slider').owlCarousel({
         smartSpeed: 1000,
+        animateOut: 'fadeOut',
         loop: true,
         items: 1,
         margin: 0,

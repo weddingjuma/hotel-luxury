@@ -167,15 +167,17 @@ function hotel_luxury_get_featured_posts(){
 				<img src="<?php echo $thumbnail_url[0] ?>" alt="" />
 				<div class="carousel-caption intro-caption">
 					<div class="slide-info">
-						<h1 class="slider-title"><?php  the_title() ?></h1>
-						<div class="inline">
-							<i class="fa fa-star"></i>
-							<i class="fa fa-star"></i>
-							<i class="fa fa-star"></i>
-							<i class="fa fa-star"></i>
-							<i class="fa fa-star"></i>
-						</div>
-						<?php the_excerpt() ?>
+						<div class="slide-content">
+                            <h1 class="slider-title"><?php  the_title() ?></h1>
+                            <div class="inline">
+                                <i class="fa fa-star"></i>
+                                <i class="fa fa-star"></i>
+                                <i class="fa fa-star"></i>
+                                <i class="fa fa-star"></i>
+                                <i class="fa fa-star"></i>
+                            </div>
+							<?php the_excerpt() ?>
+                        </div>
 					</div>
 				</div>
 			</div>
