@@ -859,9 +859,6 @@ a.banner-more:hover{color:#fff;}
 
 /* Sidebar.
 ----------------------------------------------------------------------------------------*/
-.page.right-sidebar-wrapper .sidebar,
-.blog.right-sidebar-wrapper .sidebar {padding-left:30px;}
-
 .blog.left-sidebar-wrapper .sidebar,
 .page.left-sidebar-wrapper .sidebar{padding-right:30px;}
 
