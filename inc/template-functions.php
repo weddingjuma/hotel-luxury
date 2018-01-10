@@ -284,7 +284,7 @@ if ( ! function_exists( 'hotel_luxury_display_title_bar' ) ) {
 	            $show = ( $show_titlebar_on_event == 1 ) ? true : false;
             }
 
-            elseif ( is_product()  || is_product_category() || is_product_tag() ) {
+            elseif ( hotel_luxury_is_wc() == true ) {
 			    $titlebar_title = esc_attr( get_theme_mod('product_title', '') ) ;
 			    $titlebar_subtitle = esc_attr( get_theme_mod('product_sub_title', '') ) ;
 			    $show = ( $show_titlebar_on_product == 1 ) ? true : false;
