@@ -220,3 +220,17 @@ function hotel_luxury_is_single_event(){
 	}
 	return $is_event;
 }
+
+function hotel_luxury_is_wc(){
+
+	$condition = false;
+
+	if ( function_exists('is_product') || function_exists('is_product_category')
+	     || function_exists('is_product_tag') ) {
+		if ( is_product() || is_product_category() || is_product_tag() ) {
+			$condition = true;
+		}
+	}
+
+	return $condition;
+}

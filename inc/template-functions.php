@@ -42,7 +42,7 @@ function hotel_luxury_body_classes( $classes ) {
     if ( is_singular('tribe_events') || hotel_luxury_is_event() == true ) {
         $show = ( $show_titlebar_on_event == 1 ) ? true : false;
     }
-    elseif ( is_product()  || is_product_category() || is_product_tag() ) {
+    elseif ( hotel_luxury_is_wc() == true ) {
 	    $show = ( $show_titlebar_on_product == 1 ) ? true : false;
     }
     elseif ( is_single() ) {

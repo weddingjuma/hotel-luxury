@@ -305,7 +305,7 @@ function hotel_luxury_customize_register( $wp_customize ) {
 
 	$wp_customize->add_setting( 'show_main_slider', array(
 		'sanitize_callback' => 'hotel_luxury_checkbox_sanitize',
-		'default'           => '1'
+		'default'           => '0'
 	) );
 
 	$wp_customize->add_control( 'show_main_slider',

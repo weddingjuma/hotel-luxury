@@ -443,14 +443,8 @@ p.demo_store {
     height: auto;
 }
 .woocommerce ul.products li.product, .woocommerce-page ul.products li.product {
-    float: left;
-    margin: 0px 0px 30px 0px;
-    padding: 0;
-    position: relative;
-    width: 25%;
-    margin-left: 0;
-    padding:0px 15px;
-    text-align:center;
+    padding: 0 15px;
+    text-align: left;
 }
 .woocommerce ul.products li.product .onsale, .woocommerce-page ul.products li.product .onsale {
     left: auto;
@@ -476,7 +470,7 @@ p.demo_store {
 .woocommerce ul.products li.product .price{
     float:  right;
     width: 100%;
-    text-align: center;
+    text-align: left;
 }
 .woocommerce ul.products li.product .price del, .woocommerce-page ul.products li.product .price del{
     float: left;
@@ -503,6 +497,7 @@ p.demo_store {
     display: block;
     font-weight: normal;
     margin-bottom: 13px;
+    font-size: 16px;
 }
 .woocommerce ul.products li.product .price del, .woocommerce-page ul.products li.product .price del {
     font-size: 12px;
@@ -569,7 +564,7 @@ p.demo_store {
     background: #f7f6f7;
     color: #978a97;
 }
-.woocommerce a.button, .woocommerce button.button, .woocommerce input.button, .woocommerce #respond input#submit, .woocommerce #content input.button, .woocommerce-page a.button, .woocommerce-page button.button, .woocommerce-page input.button, .woocommerce-page #respond input#submit, .woocommerce-page #content input.button {
+.woocommerce a.button, .woocommerce a.button.alt, .woocommerce button.button, .woocommerce button.button.alt, .woocommerce input.button, .woocommerce #respond input#submit, .woocommerce #content input.button, .woocommerce-page a.button, .woocommerce-page button.button, .woocommerce-page input.button, .woocommerce-page #respond input#submit, .woocommerce-page #content input.button {
  text-transform: uppercase;font-size: 13px;font-family: 'Roboto',Arial,sans-serif;padding:8px 22px;display: inline-block;--webkit-border-radius: 2px; -moz-border-radius: 2px; border-radius: 2px; text-shadow:0 1px 0 rgba(0, 0, 0, 0.1); text-align:center;vertical-align: middle;cursor: pointer; -webkit-box-shadow: 0 -2px 0 rgba(0, 0, 0, 0.1) inset; -moz-box-shadow: 0 -2px 0 rgba(0, 0, 0, 0.1) inset; box-shadow: 0 -2px 0 rgba(0, 0, 0, 0.1) inset; color:#fff;background-color: #BCA474;
 }
 .woocommerce a.button.loading, .woocommerce button.button.loading, .woocommerce input.button.loading, .woocommerce #respond input#submit.loading, .woocommerce #content input.button.loading, .woocommerce-page a.button.loading, .woocommerce-page button.button.loading, .woocommerce-page input.button.loading, .woocommerce-page #respond input#submit.loading, .woocommerce-page #content input.button.loading {
@@ -595,7 +590,7 @@ p.demo_store {
     text-indent: 0;
     background: url(../images/success.png) no-repeat;
 }
-.woocommerce a.button:hover, .woocommerce button.button:hover, .woocommerce input.button:hover, .woocommerce #respond input#submit:hover, .woocommerce #content input.button:hover, .woocommerce-page a.button:hover, .woocommerce-page button.button:hover, .woocommerce-page input.button:hover, .woocommerce-page #respond input#submit:hover, .woocommerce-page #content input.button:hover {
+.woocommerce a.button:hover, .woocommerce a.button.alt:hover, .woocommerce button.button.alt:hover, .woocommerce button.button:hover, .woocommerce input.button:hover, .woocommerce #respond input#submit:hover, .woocommerce #content input.button:hover, .woocommerce-page a.button:hover, .woocommerce-page button.button:hover, .woocommerce-page input.button:hover, .woocommerce-page #respond input#submit:hover, .woocommerce-page #content input.button:hover {
     color:#fff;background-color: #b8b8b8;
     -o-transition:.5s;
     -ms-transition:.5s;
