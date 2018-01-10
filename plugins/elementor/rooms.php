@@ -156,7 +156,7 @@ class Hotel_Luxury_Elements_Rooms extends Widget_Base {
 					}
 					?>
 						<div class="mix col-md-<?php echo $settings['column_layout'] . ' ' . esc_attr( join(' ', $filter_class ) ); ?> column">
-                            <div class="hover ehover2">
+                            <div class="hover">
                                 <a class="first-gallery-thumb" href="<?php the_permalink() ?>">
 									<?php the_post_thumbnail('hotel_luxury_medium') ; ?>
 								</a>
