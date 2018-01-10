@@ -1,30 +1,22 @@
 <?php
 namespace HotelElements\Widgets;
-
 use  Elementor\Widget_Base ;
 use  Elementor\Controls_Manager ;
-
 if ( ! defined( 'ABSPATH' ) ) exit; // Exit if accessed directly
-
 class Hotel_Luxury_Elements_Rooms extends Widget_Base {
-
 	public function get_name() {
 		return 'hotel-luxury-rooms';
 	}
-
 	public function get_title() {
 		return __( 'Rooms', 'hotel-luxury' );
 	}
-
 	public function get_icon() {
 		// Icon name from the Elementor font file, as per http://dtbaker.net/web-development/creating-your-own-custom-elementor-widgets/
 		return 'fa fa-hotel';
 	}
-
 	public function get_categories() {
 		return [ 'hotel-elements' ];
 	}
-
 	protected function _register_controls() {
 		$this->start_controls_section(
 			'section_content',
@@ -32,7 +24,6 @@ class Hotel_Luxury_Elements_Rooms extends Widget_Base {
 				'label' => esc_html__( 'Rooms', 'hotel-luxury' ),
 			]
 		);
-
 		$this->add_control(
 			'room_title',
 			[
@@ -41,7 +32,6 @@ class Hotel_Luxury_Elements_Rooms extends Widget_Base {
 				'default' => esc_html__( 'Rooms', 'hotel-luxury' )
 			]
 		);
-
 		$this->add_control(
 			'number_posts',
 			[
@@ -59,7 +49,6 @@ class Hotel_Luxury_Elements_Rooms extends Widget_Base {
 				'options' => hotel_luxury_get_taxonomy('category')
 			]
 		);
-
 		$this->add_control(
 			'order',
 			[
@@ -72,7 +61,6 @@ class Hotel_Luxury_Elements_Rooms extends Widget_Base {
 				]
 			]
 		);
-
 		$this->add_control(
 			'orderby',
 			[
@@ -87,7 +75,6 @@ class Hotel_Luxury_Elements_Rooms extends Widget_Base {
 				]
 			]
 		);
-
 		$this->add_control(
 			'column_layout',
 			[
@@ -100,7 +87,6 @@ class Hotel_Luxury_Elements_Rooms extends Widget_Base {
 				]
 			]
 		);
-
 		$this->add_control(
 			'enable_filter',
 			[
@@ -112,11 +98,8 @@ class Hotel_Luxury_Elements_Rooms extends Widget_Base {
 				'return_value' => 'yes',
 			]
 		);
-
 		$this->end_controls_section();
 	}
-
-
 	protected function render( $instance = [] ) {
 		// get our input from the widget settings.
 		global $post;
@@ -129,80 +112,65 @@ class Hotel_Luxury_Elements_Rooms extends Widget_Base {
 			'orderby'        => $settings['orderby'],
 			'order'          => $settings['order'],
 		);
-
 		$rooms = get_posts( $args );
-
 		?>
-
 		<div class="builder-item-wrapper builder-rooms ">
-
 			<div class="builder-title-wrapper clearfix has_filter">
 				<h3 class="builder-item-title"><?php echo !empty( $settings['room_title'] ) ? esc_attr( $settings['room_title'] ) : esc_html__('Rooms', 'hotel-luxury') ?></h3>
-
 				<!-- filter tag -->
 				<?php
 				if ( $settings['enable_filter'] == 'yes' ) {
-
 					$filter = '';
 					$current_tag = '';
                     $tags = array();
 					$filter .= '<ul data-option-key="filter" class="cpt-filters right">
                     <li><button type="button" data-filter="all">' . esc_html__( 'All', 'hotel-luxury' ) . '</button></li>';
-
 					foreach ( $rooms as $post ) {
-
 						$term_objects = get_the_terms( $post->ID,  'post_tag' );
-
 						if ( $term_objects ) :
 						foreach ( $term_objects as $term_object ) {
 							$tags[ $term_object->slug ] = $term_object->name;
 						}
 						endif;
 					}
-
 					$tags = array_unique($tags);
 					foreach ( $tags as $slug => $name ) {
 						$filter .= '<li><button data-filter=".' . esc_attr( $slug ) . '">' . esc_html( stripslashes( $name ) ) . '</button></li>';
                     }
-
 					$filter .= '</ul>';
-
 					echo $filter;
 				}
 				?>
 			</div>
-
-
 			<!-- room layout -->
 			<?php
-
 			if ( $rooms ) {
 				echo  '<div class="room-items row clearfix">';
 				foreach ( $rooms as $post ) {
 					setup_postdata( $post );
-
 					$room_id = get_the_ID();
 					$term_list = wp_get_post_terms( $room_id, 'post_tag', array("fields" => "all") );
 					$filter_class = array();
-
 					foreach($term_list as $term){
 						$filter_class[]= $term->slug;
 					}
 					?>
 						<div class="mix col-md-<?php echo $settings['column_layout'] . ' ' . esc_attr( join(' ', $filter_class ) ); ?> column">
-							<div class="">
-								<a class="first-gallery-thumb" href="<?php the_permalink() ?>">
+                            <div class="hover ehover2">
+                                <a class="first-gallery-thumb" href="<?php the_permalink() ?>">
 									<?php the_post_thumbnail('hotel_luxury_medium') ; ?>
 								</a>
-
-							</div>
+                                <div class="overlay">
+                                    <h2><a href="<?php the_permalink() ?>"><?php the_title() ?></a></h2>
+                                    <a class="info"><i class="fa fa-link" aria-hidden="true"></i></a>
+                                </div>
+                            </div>                            
 							<div class="cpt-detail">
 								<h2 class="cpt-title">
 									<a href="<?php the_permalink() ?>"><?php the_title() ?></a>
 								</h2>
 								<div class="cpt-desc"><?php the_excerpt() ?></div>
 							</div>
-
 						</div>
 					<?php
 				}
@@ -211,7 +179,6 @@ class Hotel_Luxury_Elements_Rooms extends Widget_Base {
 			wp_reset_postdata();
 			?>
 		</div>
-
 		<?php if ( $settings['enable_filter'] == 'yes' ) { ?>
 		<script type="text/javascript">
             jQuery( function ($) {
@@ -226,10 +193,7 @@ class Hotel_Luxury_Elements_Rooms extends Widget_Base {
             });
 		</script>
 		<?php } ?>
-
 		<?php
 	}
-
 	protected function _content_template() {}
 }
-

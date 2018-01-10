@@ -199,6 +199,7 @@ function hotel_luxury_scripts() {
 	wp_enqueue_style( 'font-awesome', get_template_directory_uri() . '/assets/css/font-awesome.min.css', array(), '4.0', '' );
 	wp_enqueue_style( 'woocommerce-modify', get_template_directory_uri() . '/assets/css/woocommerce-modify.css', array(), '0.0.1', '' );
 	wp_enqueue_style( 'magnific-popup', get_template_directory_uri() . '/assets/css/magnific-popup.css', array(), '1.1.0', '' );
+    wp_enqueue_style( 'effects', get_template_directory_uri() . '/assets/css/effects.css', array(), '1.1.0', '' );
 	wp_enqueue_style( 'owl.carousel', get_template_directory_uri() . '/assets/css/owl.carousel.min.css', array(), '2.2.1', '' );
 	wp_enqueue_style( 'owl.theme.default', get_template_directory_uri() . '/assets/css/owl.theme.default.min.css', array(), '2.2.1', '' );
 
