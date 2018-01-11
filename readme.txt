@@ -31,11 +31,17 @@ Hotel Luxury includes support for Elementor and The Event Calendar plugins.
 === Images ===
 
 Screenshot images licensed under CC0 Public Domain (http://creativecommons.org/publicdomain/zero/1.0/deed.en)
-* https://www.pexels.com/photo/architecture-boat-buildings-business-614224/
-* https://www.pexels.com/photo/view-of-tourist-resort-338504/
+* https://www.pexels.com/photo/architecture-bed-bedroom-chair-237371/
+* https://www.pexels.com/photo/bed-bedroom-furniture-headboard-279746/
+* https://www.pexels.com/photo/bed-bedroom-blue-brown-172872/
+* https://www.pexels.com/photo/apartment-beach-bed-bedroom-271643/
+* https://www.pexels.com/photo/beige-wooden-nightstand-with-white-desk-lamp-brown-wooden-bed-with-grey-comforter-set-707581/
 
 
 === Changelog ===
+Version 0.0.3
+* Update theme requirements
+
 Version 0.0.2
 * Remove zip file
 
