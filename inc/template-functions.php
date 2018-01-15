@@ -21,13 +21,13 @@ function hotel_luxury_body_classes( $classes ) {
 		$page_id = get_option( 'page_on_front' );
 	} elseif ( is_home() ) {
 		$page_id = get_option( 'page_for_posts' );
-	} elseif ( is_shop() ) {
+	} elseif ( hotel_luxury_is_shop_page() == true ) {
 		$page_id = get_option( 'woocommerce_shop_page_id' );
 	} else {
 		$page_id = get_the_ID();
 	}
 
-	if ( is_page() || is_home() || is_shop() ) {
+	if ( is_page() || is_home() || hotel_luxury_is_shop_page() == true ) {
 		$hide_title_bar = get_post_meta( $page_id, '_hide_title_bar', true );
 	} else {
 		$hide_title_bar = 1;
@@ -100,8 +100,8 @@ function hotel_luxury_register_required_plugins() {
 		),
 
 		array(
-			'name'      => 'One Click Demo Import',
-			'slug'      => 'one-click-demo-import',
+			'name'      => 'WooCommerce',
+			'slug'      => 'woocommerce',
 			'required'  => false,
 		)
 	);
@@ -238,14 +238,14 @@ if ( ! function_exists( 'hotel_luxury_display_title_bar' ) ) {
 		    $page_id = get_option( 'page_on_front' );
 	    } elseif ( is_home() ) {
 		    $page_id = get_option( 'page_for_posts' );
-	    }  elseif ( is_shop() ){
+	    }  elseif ( hotel_luxury_is_shop_page() == true ){
 		    $page_id = get_option( 'woocommerce_shop_page_id' );
         }
 	    else {
 		    $page_id = get_the_ID();
 	    }
 
-	    if ( is_page() || is_home() || is_shop() ) {
+	    if ( is_page() || is_home() || hotel_luxury_is_shop_page() ) {
 		    $hide_title_bar = get_post_meta( $page_id, '_hide_title_bar', true );
 	    } else {
 		    $hide_title_bar = 1;

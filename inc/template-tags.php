@@ -234,3 +234,15 @@ function hotel_luxury_is_wc(){
 
 	return $condition;
 }
+
+function hotel_luxury_is_shop_page(){
+	$condition = false;
+
+	if ( function_exists('is_shop') ) {
+		if ( is_shop() ) {
+			$condition = true;
+		}
+	}
+
+	return $condition;
+}
