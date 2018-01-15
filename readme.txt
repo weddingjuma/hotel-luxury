@@ -3,7 +3,7 @@ Hotel Luxury, Copyright 2018 FilaThemes
 Hotel Luxury is distributed under the terms of the GNU GPL
 
 == Description ==
-Hotel Luxury is the most charming, luxurious and powerful WordPress theme for your spa, resort, hotel business, vacation room/apartment rental services. Its original goal is to help you easier manage your rooms listings, customer bookings and reservations online. With its beautiful design, and high coding quality, this theme can showcase your unique accommodations to the world and attract more visitors to your website.
+Hotel Luxury is the most charming, luxurious and powerful WordPress theme for your spa, resort, hotel business, vacation room/apartment rental services. Its original goal is to help you easier manage your rooms listings, customer bookings and reservations online. With its beautiful design, and high coding quality, this theme can showcase your unique accommodations to the world and attract more visitors to your website. See our demo: http://filathemes.com/hotel-luxury/ and documentation: http://filathemes.com/hotel-luxury/docs/
 
 == Installation ==
 
@@ -19,14 +19,29 @@ Hotel Luxury includes support for Elementor and The Event Calendar plugins.
 
 
 == Credits ==
+- Underscores
+Based on Underscores http://underscores.me/, (C) 2012-2017 Automattic, Inc., [GPLv2 or later](https://www.gnu.org/licenses/gpl-2.0.html)
 
-* Based on Underscores http://underscores.me/, (C) 2012-2017 Automattic, Inc., [GPLv2 or later](https://www.gnu.org/licenses/gpl-2.0.html)
-* Font Awesome License, SIL OFL 1.1. (http://scripts.sil.org/OFL) http://fontawesome.io/license/
-* Font Awesome Code License, MIT. http://opensource.org/licenses/mit-license.html
-* MixItUp License, CC ( http://creativecommons.org/licenses/by-nc/3.0/)  https://www.kunkalabs.com/mixitup/licenses/
-* Magnific Popup License, MIT. http://dimsemenov.com/plugins/magnific-popup/
-* Owl Carousel, Licensed under MIT. https://owlcarousel2.github.io/OwlCarousel2/
-* Bootstrap, Licensed under MIT. https://github.com/twbs/bootstrap/blob/master/
+- FontAwesome
+Source: https://fortawesome.github.io/Font-Awesome/
+License: GPL - https://fortawesome.github.io/Font-Awesome/license/
+
+- OwlCarousel
+Source: https://owlcarousel2.github.io/OwlCarousel2/
+License: Licensed under MIT
+
+- Bootstrap
+Source: https://github.com/twbs/bootstrap
+License: LICENSE MIT LICENSE https://github.com/twbs/bootstrap/blob/master/
+
+- MixItUp
+Source: https://www.kunkalabs.com/mixitup/
+License: Creative Commons CC-BY-ND - https://github.com/patrickkunka/mixitup
+
+- Magnific Popup
+Source: http://dimsemenov.com/plugins/magnific-popup/
+License: Licensed under MIT https://github.com/dimsemenov/Magnific-Popup
+
 
 === Images ===
 
@@ -39,6 +54,9 @@ Screenshot images licensed under CC0 Public Domain (http://creativecommons.org/p
 
 
 === Changelog ===
+Version 0.0.4
+* Fixed theme review
+
 Version 0.0.3
 * Update theme requirements
 

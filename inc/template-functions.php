@@ -185,6 +185,7 @@ function hotel_luxury_get_featured_posts(){
 		endwhile;
 		echo '</div></div>';
 	}
+	wp_reset_postdata();
 
 }
 
@@ -253,7 +254,7 @@ if ( ! function_exists( 'hotel_luxury_display_title_bar' ) ) {
 	    $show_cover = get_post_meta( $page_id, '_cover', true );
 	    $title_bar_image = wp_get_attachment_image_src( get_post_thumbnail_id( $page_id ), 'full' );
 	    if ( $show_cover && $title_bar_image ) {
-	        $css = 'style="background-image: url('. $title_bar_image[0] .')"';
+	        $css = 'style="background-image: url('. esc_url( $title_bar_image[0] ) .')"';
         } else {
 	        if ( ! empty($header_image) ) {
 		        $css = 'style="background-image: url('. $header_image .')"';

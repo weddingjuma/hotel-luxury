@@ -14,12 +14,12 @@
 
         <?php
         $newsletter_disable = esc_attr( get_theme_mod('newsletter_disable', '1') );
-        $newsletter_mailchimp = esc_url( get_theme_mod('newsletter_mailchimp_form_url') ) ;
+        $newsletter_mailchimp = get_theme_mod('newsletter_mailchimp_form_url') ;
         if ( $newsletter_disable != '1' ) :
             ?>
             <div class="subscribe_section row">
-                <form id="subscribe_form" method="post" action="<?php if ($newsletter_mailchimp != '') echo $newsletter_mailchimp; ?>">
-                    <label for="email_subscribe"><?php echo get_theme_mod( 'newsletter_title','Sign up to receive Special Offers') ?>&nbsp;&nbsp;</label>
+                <form id="subscribe_form" method="post" action="<?php if ($newsletter_mailchimp != '') echo esc_url( $newsletter_mailchimp ); ?>">
+                    <label for="email_subscribe"><?php echo get_theme_mod( 'newsletter_title',esc_html__( 'Sign up to receive Special Offers', 'hotel-luxury' ) ) ?>&nbsp;&nbsp;</label>
                     <input type="text" placeholder="<?php esc_attr_e('Enter your e-mail address', 'hotel-luxury') ?>" value="" name="email_subscribe" id="email_subscribe" class="subs_email_input">
                     <input type="submit" class="btn btn_default" value="<?php esc_attr_e('Subscribe', 'hotel-luxury') ?>" name="">
                 </form>

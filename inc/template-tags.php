@@ -127,7 +127,7 @@ if ( ! function_exists( 'hotel_luxury_get_gallery_data' ) ) {
 		}
 
 		$size = 'hotel_luxury_medium';
-		$image_thumb_size = apply_filters( 'onepress_gallery_page_img_size', $size );
+		$image_thumb_size = apply_filters( 'hotel_luxury_gallery_page_img_size', $size );
 		if ( ! empty( $images ) ) {
 			$images = explode( ',', $images );
 			foreach ( $images as $post_id ) {
