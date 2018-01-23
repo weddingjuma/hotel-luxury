@@ -195,33 +195,19 @@ function hotel_luxury_customize_register( $wp_customize ) {
 		)
 	);
 
-	$wp_customize->add_setting( 'newsletter_title', array(
+	$wp_customize->add_setting( 'newsletter_form_shortcode', array(
 		'sanitize_callback' => 'sanitize_text_field',
 		'default'           => esc_html__( 'Sign up to receive Special Offers', 'hotel-luxury' )
 	) );
 
-	$wp_customize->add_control( 'newsletter_title',
+	$wp_customize->add_control( 'newsletter_form_shortcode',
 		array(
-			'label'       => esc_html__('Newsletter Form Title', 'hotel-luxury'),
+			'label'       => esc_html__('MailChimp Form Shortcode', 'hotel-luxury'),
 			'section'     => 'newsletter',
 			'description' => ''
 		)
 	);
-	// Mailchimp action url
-	$wp_customize->add_setting( 'newsletter_mailchimp_form_url',
-		array(
-			'sanitize_callback' => 'esc_url',
-			'default'           => '',
-			'transport'         => 'postMessage', // refresh or postMessage
-		)
-	);
-	$wp_customize->add_control( 'newsletter_mailchimp_form_url',
-		array(
-			'label'       => esc_html__('MailChimp Action URL', 'hotel-luxury'),
-			'section'     => 'newsletter',
-			'description' => __( 'The newsletter form use MailChimp, please follow <a target="_blank" href="https://goo.gl/xuuQaC">this guide</a> to know how to get MailChimp Action URL.', 'hotel-luxury' )
-		)
-	);
+
 
 
 	$wp_customize->add_setting( 'primary_color', array(

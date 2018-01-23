@@ -60,7 +60,7 @@ function hotel_luxury_theme_info_page() {
 					</div>
 
 					<div class="theme_info_right">
-						<img src="<?php echo get_template_directory_uri(); ?>/screenshot.png" alt="Theme Screenshot" />
+						<img src="<?php echo get_template_directory_uri(); ?>/screenshot.png" alt="<?php esc_html_e( 'Theme Screenshot', 'hotel-luxury' ); ?>" />
 					</div>
 				</div>
 			</div>

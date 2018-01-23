@@ -90,13 +90,19 @@ function hotel_luxury_register_required_plugins() {
 		array(
 			'name'      => 'Elementor Page Builder',
 			'slug'      => 'elementor',
-			'required'  => true,
+			'required'  => false,
 		),
 
 		array(
 			'name'      => 'The Events Calendar',
 			'slug'      => 'the-events-calendar',
-			'required'  => true,
+			'required'  => false,
+		),
+
+		array(
+			'name'      => 'MailChimp for WordPress',
+			'slug'      => 'mailchimp-for-wp',
+			'required'  => false,
 		),
 
 		array(
@@ -164,7 +170,7 @@ function hotel_luxury_get_featured_posts(){
 			$thumbnail_url = wp_get_attachment_image_src( get_post_thumbnail_id( $f_query->ID ), 'full' , true );
 			?>
 			<div class="item">
-				<img src="<?php echo $thumbnail_url[0] ?>" alt="" />
+				<img src="<?php echo esc_url( $thumbnail_url[0] ) ?>" alt="" />
 				<div class="carousel-caption intro-caption">
 					<div class="slide-info">
 						<div class="slide-content">
@@ -338,6 +344,6 @@ function hotel_luxury_hide_shop_page_title() {
  * Footer Copyright
  */
 function hotel_luxury_footer_info() {
-	echo sprintf( esc_html__( 'Copyright &copy; %1$s %2$s - %3$s theme by FilaThemes', 'hotel-luxury' ), date( 'Y' ), '<a href="'.esc_url( home_url( '/' ) ).'" title="'.esc_attr( get_bloginfo( 'name', 'display' ) ).'">'.esc_html( get_bloginfo( 'name', 'display' ) ).'</a>', '<a target="_blank" href="http://filathemes.com/hotel-luxury">Hotel Luxury</a>' );
+	echo sprintf( esc_html__( 'Copyright &copy; %1$s %2$s - %3$s theme by FilaThemes', 'hotel-luxury' ), date_i18n( __('Y', 'hotel-luxury') ), '<a href="'.esc_url( home_url( '/' ) ).'" title="'.esc_attr( get_bloginfo( 'name', 'display' ) ).'">'.esc_html( get_bloginfo( 'name', 'display' ) ).'</a>', '<a target="_blank" href="http://filathemes.com/hotel-luxury">Hotel Luxury</a>' );
 }
 add_action( 'hotel_luxury_footer_copyright', 'hotel_luxury_footer_info' );

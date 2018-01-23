@@ -36,8 +36,7 @@
     
                                 wp_nav_menu( array(
                                     'theme_location' => 'topbar',
-                                    'menu_id'        => 'topbar-menu',
-                                    'fallback_cb'    => 'link_to_menu_editor'
+                                    'menu_id'        => 'topbar-menu'
                                 ) );
     
     	                        ?>

@@ -58,7 +58,7 @@ class Hotel_Luxury_Posts_Widget extends WP_Widget {
 					}
 					?>
 					<div class="p-info">
-						<h2 class="entry-title"><a title="<?php the_title_attribute(); ?>" href="<?php the_permalink(); ?>" rel="bookmark"><?php the_title( ); ?></a></h2>
+						<h2 class="entry-title"><a title="<?php the_title_attribute(); ?>" href="<?php the_permalink(); ?>" rel="bookmark"><?php the_title(); ?></a></h2>
 						<?php
 						echo '<span class="entry-date">' . get_the_date() . '</span>';
 						?>
@@ -133,7 +133,7 @@ class Hotel_Luxury_Posts_Widget extends WP_Widget {
 			'order' => 'desc',
 			'category' => ''
 		) );
-		$instance['title'] = strip_tags( $new_instance['title'] );
+		$instance['title'] = sanitize_text_field( $new_instance['title'] );
 		$instance['number'] = ! absint( $new_instance['number'] ) ? 4 : absint( $new_instance['number'] );
 		$instance['orderby'] =  sanitize_text_field( $new_instance['orderby'] );
 		$instance['order'] =  sanitize_text_field( $new_instance['order'] );

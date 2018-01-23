@@ -154,14 +154,14 @@ class Hotel_Luxury_MetaBox {
         <p>
             <label>
 	            <?php _e( 'Titlebar Title', 'hotel-luxury' ); ?><br>
-                <input type="input" class="regular-text" name="hotel_luxury_titlebar_title"  value="<?php echo $titlebar_title ?>" >
+                <input type="input" class="regular-text" name="hotel_luxury_titlebar_title"  value="<?php echo esc_attr( $titlebar_title ) ?>" >
             </label>
         </p>
 
         <p>
             <label>
 	            <?php _e( 'Titlebar Sub Title', 'hotel-luxury' ); ?><br>
-                <input type="input" class="regular-text" name="hotel_luxury_titlebar_subtitle" value="<?php echo $titlebar_subtitle ?>" >
+                <input type="input" class="regular-text" name="hotel_luxury_titlebar_subtitle" value="<?php echo esc_attr( $titlebar_subtitle ) ?>" >
             </label>
         </p>
 
