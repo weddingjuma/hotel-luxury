@@ -7,6 +7,8 @@ function hotel_luxury_theme_info() {
 	$theme_data = wp_get_theme();
 	add_theme_page( sprintf( esc_html__( '%s Dashboard', 'hotel-luxury' ), $theme_data->Name ), sprintf( esc_html__('%s Theme', 'hotel-luxury'), $theme_data->Name), 'edit_theme_options', 'hotel_luxury', 'hotel_luxury_theme_info_page');
 }
+
+
 if ( ! function_exists( 'hotel_luxury_admin_scripts' ) ) :
 	/**
 	 * Enqueue scripts for admin page only: Theme info page
@@ -18,6 +20,8 @@ if ( ! function_exists( 'hotel_luxury_admin_scripts' ) ) :
 	}
 endif;
 add_action('admin_enqueue_scripts', 'hotel_luxury_admin_scripts');
+
+
 function hotel_luxury_theme_info_page() {
 	$theme_data = wp_get_theme();
 
@@ -28,10 +32,19 @@ function hotel_luxury_theme_info_page() {
 	} else {
 		$tab = null;
 	}
+
+	if ( version_compare(PHP_VERSION, '5.4.0') < 0 ) {
+		?>
+        <div class="warning notice notice-warning notice-alt is-dismissible" style="display: block !important;">
+            <p><strong><?php esc_html_e('The Hotel Luxury theme requires PHP version 5.4 or greater.', 'hotel-luxury'); ?></strong></p>
+        </div>
+		<?php
+	}
 	?>
 	<div class="wrap about-wrap theme_info_wrapper">
 		<h1><?php printf(esc_html__('Welcome to %1$1s - Version %2$2s', 'hotel-luxury'), $theme_data->Name, $theme_data->Version ); ?></h1>
 		<div class="about-text"><?php echo $theme_data->Description ?></div>
+
 
 		<h2 class="nav-tab-wrapper">
 			<a href="?page=hotel_luxury" class="nav-tab<?php echo is_null($tab) ? ' nav-tab-active' : null; ?>"><?php echo $theme_data->Name; ?></a>
@@ -79,4 +92,26 @@ function hotel_luxury_theme_info_page() {
 
 	<?php
 }
+
+
+function hotel_luxury_admin_notice(){
+	if ( version_compare(PHP_VERSION, '5.4.0') < 0 ) {
+	    ?>
+        <div class="warning notice notice-warning notice-alt is-dismissible">
+            <p><strong><?php esc_html_e('The Hotel Luxury theme require PHP version 5.4 or greater.', 'hotel-luxury'); ?></strong></p>
+        </div>
+        <?php
+	}
+}
+
+function hotel_luxury_one_activation_admin_notice(){
+	global $pagenow;
+	if ( is_admin() && ('themes.php' == $pagenow) && isset( $_GET['activated'] ) ) {
+		add_action( 'admin_notices', 'hotel_luxury_admin_notice' );
+	}
+}
+/* activation notice */
+add_action( 'load-themes.php',  'hotel_luxury_one_activation_admin_notice'  );
+
+
 ?>
