@@ -34,10 +34,6 @@ License: Licensed under MIT
 Source: https://github.com/twbs/bootstrap
 License: LICENSE MIT LICENSE https://github.com/twbs/bootstrap/blob/master/
 
-- MixItUp
-Source: https://www.kunkalabs.com/mixitup/
-License: Creative Commons CC-BY-ND - https://github.com/patrickkunka/mixitup
-
 - Magnific Popup
 Source: http://dimsemenov.com/plugins/magnific-popup/
 License: Licensed under MIT https://github.com/dimsemenov/Magnific-Popup
@@ -54,6 +50,12 @@ Screenshot images licensed under CC0 Public Domain (http://creativecommons.org/p
 
 
 === Changelog ===
+Version 0.0.5
+* Fixed theme review
+* Remove mixitup JS
+* Add PHP version require
+* Update Mailchimp subscription form
+
 Version 0.0.4
 * Fixed theme review
 
