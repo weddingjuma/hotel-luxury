@@ -87,17 +87,7 @@ class Hotel_Luxury_Elements_Rooms extends Widget_Base {
 				]
 			]
 		);
-		$this->add_control(
-			'enable_filter',
-			[
-				'label' => __( 'Enable Filter By Tags', 'hotel-luxury' ),
-				'type' => Controls_Manager::SWITCHER,
-				'default' => '',
-				'label_on' => __( 'Show', 'hotel-luxury' ),
-				'label_off' => __( 'Hide', 'hotel-luxury' ),
-				'return_value' => 'yes',
-			]
-		);
+
 		$this->end_controls_section();
 	}
 	protected function render( $instance = [] ) {
@@ -117,30 +107,7 @@ class Hotel_Luxury_Elements_Rooms extends Widget_Base {
 		<div class="builder-item-wrapper builder-rooms ">
 			<div class="builder-title-wrapper clearfix has_filter">
 				<h3 class="builder-item-title"><?php echo !empty( $settings['room_title'] ) ? esc_attr( $settings['room_title'] ) : esc_html__('Rooms', 'hotel-luxury') ?></h3>
-				<!-- filter tag -->
-				<?php
-				if ( $settings['enable_filter'] == 'yes' ) {
-					$filter = '';
-					$current_tag = '';
-                    $tags = array();
-					$filter .= '<ul data-option-key="filter" class="cpt-filters right">
-                    <li><button type="button" data-filter="all">' . esc_html__( 'All', 'hotel-luxury' ) . '</button></li>';
-					foreach ( $rooms as $post ) {
-						$term_objects = get_the_terms( $post->ID,  'post_tag' );
-						if ( $term_objects ) :
-						foreach ( $term_objects as $term_object ) {
-							$tags[ $term_object->slug ] = $term_object->name;
-						}
-						endif;
-					}
-					$tags = array_unique($tags);
-					foreach ( $tags as $slug => $name ) {
-						$filter .= '<li><button data-filter=".' . esc_attr( $slug ) . '">' . esc_html( stripslashes( $name ) ) . '</button></li>';
-                    }
-					$filter .= '</ul>';
-					echo $filter;
-				}
-				?>
+
 			</div>
 			<!-- room layout -->
 			<?php
@@ -148,14 +115,8 @@ class Hotel_Luxury_Elements_Rooms extends Widget_Base {
 				echo  '<div class="room-items row clearfix">';
 				foreach ( $rooms as $post ) {
 					setup_postdata( $post );
-					$room_id = get_the_ID();
-					$term_list = wp_get_post_terms( $room_id, 'post_tag', array("fields" => "all") );
-					$filter_class = array();
-					foreach($term_list as $term){
-						$filter_class[]= $term->slug;
-					}
 					?>
-						<div class="mix col-md-<?php echo $settings['column_layout'] . ' ' . esc_attr( join(' ', $filter_class ) ); ?> column">
+						<div class="mix col-md-<?php echo $settings['column_layout'] ; ?> column">
                             <div class="hover">
                                 <?php the_post_thumbnail('hotel_luxury_medium') ; ?>
 
@@ -177,21 +138,9 @@ class Hotel_Luxury_Elements_Rooms extends Widget_Base {
 			wp_reset_postdata();
 			?>
 		</div>
-		<?php if ( $settings['enable_filter'] == 'yes' ) { ?>
-		<script type="text/javascript">
-            jQuery( function ($) {
-                var mixer = mixitup('.room-items', {
-                    selectors: {
-                        target: '.mix'
-                    },
-                    animation: {
-                        duration: 300
-                    }
-                });
-            });
-		</script>
-		<?php } ?>
+
 		<?php
 	}
+
 	protected function _content_template() {}
 }
