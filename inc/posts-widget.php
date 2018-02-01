@@ -24,18 +24,24 @@ class Hotel_Luxury_Posts_Widget extends WP_Widget {
 			'category' => ''
 		) );
 
+		$title = ! empty( $instance['title'] ) ? $instance['title'] : '';
+
+		$title = apply_filters( 'widget_title', $title, $instance, $this->id_base );
+
 		$post_args = array(
 			'posts_per_page' => absint( $instance['number'] ),
 			'order' =>   $instance['orderby'],
 			'orderby' => $instance['orderby'],
 			'post_type' => 'post',
 			'cat'   => $instance['category']
-			//'meta_key' => '_thumbnail_id',
 		);
 
 		$query = new WP_Query( $post_args );
 		echo $args['before_widget'];
-		if ( ! empty( $instance['title'] ) ) { echo $args['before_title'] . apply_filters( 'widget_title', $instance['title'] ) . $args['after_title']; };
+
+		if ( ! empty( $title ) ) {
+			echo $args['before_title'] . $title . $args['after_title'];
+        }
 
 		if ( $query->have_posts() ) {
 			$time_string = '<time class="entry-date published updated" datetime="%1$s">%2$s</time>';
@@ -133,7 +139,7 @@ class Hotel_Luxury_Posts_Widget extends WP_Widget {
 			'order' => 'desc',
 			'category' => ''
 		) );
-		$instance['title'] = ( ! empty( $new_instance['title'] ) ) ? strip_tags( $new_instance['title'] ) : '';
+		$instance['title'] =  sanitize_text_field( $new_instance['title'] );
 		$instance['number'] = ! absint( $new_instance['number'] ) ? 4 : absint( $new_instance['number'] );
 		$instance['orderby'] =  sanitize_text_field( $new_instance['orderby'] );
 		$instance['order'] =  sanitize_text_field( $new_instance['order'] );
