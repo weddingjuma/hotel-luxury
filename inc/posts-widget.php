@@ -23,7 +23,6 @@ class Hotel_Luxury_Posts_Widget extends WP_Widget {
 			'order' => 'desc',
 			'category' => ''
 		) );
-		$title =  isset( $instance['title'] ) ? $instance['title'] : esc_html__( 'Recent Posts', 'hotel-luxury' );
 
 		$post_args = array(
 			'posts_per_page' => absint( $instance['number'] ),
@@ -36,7 +35,8 @@ class Hotel_Luxury_Posts_Widget extends WP_Widget {
 
 		$query = new WP_Query( $post_args );
 		echo $args['before_widget'];
-		if ( ! empty( $title ) ) { echo $args['before_title'] . wp_kses_post( $title ) . $args['after_title']; };
+		if ( ! empty( $instance['title'] ) ) { echo $args['before_title'] . apply_filters( 'widget_title', $instance['title'] ) . $args['after_title']; };
+
 		if ( $query->have_posts() ) {
 			$time_string = '<time class="entry-date published updated" datetime="%1$s">%2$s</time>';
 			if ( get_the_time( 'U' ) !== get_the_modified_time( 'U' ) ) {
@@ -79,7 +79,7 @@ class Hotel_Luxury_Posts_Widget extends WP_Widget {
 			'order' => 'desc',
 			'category' => ''
 		) );
-		$title = $instance['title'];
+		$title = ! empty( $instance['title'] ) ? $instance['title'] : esc_html__( 'Recent Posts', 'hotel-luxury' );
 		$number = absint( $instance['number'] );
 		$orderby = $instance['orderby'];
 		$order = $instance['order'];
@@ -133,7 +133,7 @@ class Hotel_Luxury_Posts_Widget extends WP_Widget {
 			'order' => 'desc',
 			'category' => ''
 		) );
-		$instance['title'] = sanitize_text_field( $new_instance['title'] );
+		$instance['title'] = ( ! empty( $new_instance['title'] ) ) ? strip_tags( $new_instance['title'] ) : '';
 		$instance['number'] = ! absint( $new_instance['number'] ) ? 4 : absint( $new_instance['number'] );
 		$instance['orderby'] =  sanitize_text_field( $new_instance['orderby'] );
 		$instance['order'] =  sanitize_text_field( $new_instance['order'] );

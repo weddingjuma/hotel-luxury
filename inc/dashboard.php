@@ -48,7 +48,6 @@ function hotel_luxury_theme_info_page() {
 
 		<h2 class="nav-tab-wrapper">
 			<a href="?page=hotel_luxury" class="nav-tab<?php echo is_null($tab) ? ' nav-tab-active' : null; ?>"><?php echo $theme_data->Name; ?></a>
-			<a href="?page=pt-one-click-demo-import" class="nav-tab<?php echo $tab == 'demo-data-importer' ? ' nav-tab-active' : null; ?>"><?php esc_html_e( 'One Click Demo Import', 'hotel-luxury' ); ?></span></a>
 		</h2>
 
 		<?php if ( is_null($tab) ) { ?>
@@ -67,7 +66,7 @@ function hotel_luxury_theme_info_page() {
 							<h3><?php esc_html_e( 'Theme Documentation', 'hotel-luxury' ); ?></h3>
 							<p class="about"><?php printf(esc_html__('Need any help to setup and configure %s? Please have a look at our documentations instructions.', 'hotel-luxury'), $theme_data->Name); ?></p>
 							<p>
-								<a href="#" target="_blank" class="button button-secondary"><?php esc_html_e('Online Documentation', 'hotel-luxury'); ?></a>
+								<a href="http://filathemes.com/hotel-luxury/docs/" target="_blank" class="button button-secondary"><?php esc_html_e('Online Documentation', 'hotel-luxury'); ?></a>
 							</p>
 						</div>
 					</div>
@@ -78,14 +77,6 @@ function hotel_luxury_theme_info_page() {
 				</div>
 			</div>
 		<?php } ?>
-
-
-		<?php if ( $tab == 'demo-data-importer' ) { ?>
-			<div class="demo-import-tab-content info-tab-content">
-
-			</div>
-		<?php } ?>
-
 
 
 	</div> <!-- END .theme_info -->

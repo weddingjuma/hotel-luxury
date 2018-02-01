@@ -3,7 +3,7 @@ Theme Name: Hotel Luxury
 Theme URI: http://filathemes.com/hotel-luxury
 Author: FilaThemes
 Author URI: http://filathemes.com/
-Version: 0.0.5
+Version: 0.0.6
 License: GNU General Public License v2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 Text Domain: hotel-luxury
@@ -502,7 +502,7 @@ body.has-titlebar .main-outer-wrapper {margin-top:-65px;}
 body.no-titlebar .main-outer-wrapper {margin-top: 30px;}
 .page-wrapper{}
 .elementor-page .content-wrapper { padding: 5px;}
-.elementor-page .main-outer-wrapper { padding-top: 0; }
+
 
 /* Page builder item stylesheet */
 /* Page builder title */
@@ -704,17 +704,17 @@ body.no-titlebar .main-outer-wrapper {margin-top: 30px;}
 
 
 /* Page Title */
-.page-title-wrapper{ position:  relative ;padding-bottom:12px;margin-top:-4px;margin-bottom:20px;background: url('assets/images/doted-divider.png') repeat-x bottom left;}
+.page-title-wrapper{ position:  relative ;padding-bottom:12px; padding-top: 0; margin-bottom:20px;background: url('assets/images/doted-divider.png') repeat-x bottom left;}
 .page-title-wrapper .page-title{margin-bottom:0px;text-transform: uppercase;letter-spacing: -0.5px;}
 .page-title-alt .btn{padding:6px 13px;margin-top:-13px;}
 .elementor-page .page-title-wrapper { margin-bottom: 0; }
 
-.titlebar-outer-wrapper{height:207px;overflow: hidden;position: relative;border-bottom:1px solid #ffffff; background-repeat: no-repeat; background-size: cover; background-position: center; background-image: url("assets/images/title-bar.jpeg")}
+.titlebar-outer-wrapper{min-height:210px;overflow: hidden;position: relative;border-bottom:1px solid #ffffff; background-repeat: no-repeat; background-size: cover; background-position: center; background-image: url("assets/images/title-bar.jpeg")}
 .titlebar-outer-wrapper.titlebar-map{height:500px;}
-.titlebar-title{float:left;padding:25px;background:rgba(0, 0, 0, 0.6);}
-.titlebar-title h1{margin:0px 0px 5px 0px;font-size:29px;color:#fff;text-transform: uppercase;font-weight: bold;letter-spacing: -0.7px;}
-.titlebar-title .titlebar-decs{color:#d2d2d2;font-size: 13px;font-style: italic;}
-
+.titlebar-title { position: relative; padding: 50px 25px 25px; z-index: 99; width: 100%; height: 100%; text-align: center; }
+.titlebar-title h2 {margin:0 0 5px 0;font-size:29px;color:#fff;text-transform: uppercase;font-weight: bold;letter-spacing: -0.7px;}
+.titlebar-title .breadcrumbs {color:#d2d2d2;font-size: 13px;font-style: italic;}
+.titlebar-title .breadcrumbs a:hover {color:#d2d2d2; text-decoration: none;}
 /* 404 Page */
 .class-404{text-align: center;font-size: 150px;line-height: 160px;font-weight: bold;}
 
@@ -827,7 +827,7 @@ label span{color:red;}
 /* Featured Slider */
 .slider-outer-wrapper{background: #eeeeee;border-bottom:1px solid #ffffff;}
 .slider-outer-wrapper{position: relative;}
-.shadow-box{height:5px;background:none repeat scroll 0 0 rgba(0, 0, 0, 0.2);position: absolute;bottom:0px;display: block;width: 100%;z-index: 10;}
+.titlebar-outer-wrapper:after {content: ''; height:100%;background: rgba(0, 0, 0, 0.6);position: absolute;bottom: 0;display: block;width: 100%;z-index: 10;}
 
 /* Banner Section */
 .banner-item{position: relative;}

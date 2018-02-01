@@ -33,22 +33,10 @@ function hotel_luxury_body_classes( $classes ) {
 		$hide_title_bar = 1;
 	}
 
-	$show_titlebar_on_post = esc_attr( get_theme_mod('show_titlebar_on_post', 1) ) ;
-	$show_titlebar_on_event = esc_attr( get_theme_mod('show_titlebar_on_event', 1) ) ;
-	$show_titlebar_on_product = esc_attr( get_theme_mod('show_titlebar_on_product', 1) ) ;
-
-    $show = '';
-
-    if ( is_singular('tribe_events') || hotel_luxury_is_event() == true ) {
-        $show = ( $show_titlebar_on_event == 1 ) ? true : false;
+	$show = '';
+	if ( is_singular( array('tribe_events', 'post', 'product')) || hotel_luxury_is_event() == true ) {
+	    $show = true;
     }
-    elseif ( hotel_luxury_is_wc() == true ) {
-	    $show = ( $show_titlebar_on_product == 1 ) ? true : false;
-    }
-    elseif ( is_single() ) {
-		$show = ( $show_titlebar_on_post == 1 ) ? true : false;
-	}
-
 
 	if ( !$hide_title_bar || $show == true ) {
 		$classes[] = 'has-titlebar';
@@ -102,6 +90,12 @@ function hotel_luxury_register_required_plugins() {
 		array(
 			'name'      => 'MailChimp for WordPress',
 			'slug'      => 'mailchimp-for-wp',
+			'required'  => false,
+		),
+
+		array(
+			'name'      => 'Breadcrumb NavXT',
+			'slug'      => 'breadcrumb-navxt',
 			'required'  => false,
 		),
 
@@ -270,57 +264,45 @@ if ( ! function_exists( 'hotel_luxury_display_title_bar' ) ) {
         }
 
 	    $show_main_slider = esc_attr( get_theme_mod('show_main_slider', 0 ) ) ;
-	    $show_titlebar_on_post = esc_attr( get_theme_mod('show_titlebar_on_post', 1) ) ;
-	    $show_titlebar_on_event = esc_attr( get_theme_mod('show_titlebar_on_event', 1) ) ;
-	    $show_titlebar_on_product = esc_attr( get_theme_mod('show_titlebar_on_product', 1) ) ;
 
 	    if ( $show_main_slider == 1 &&  is_front_page()  ) {
 		    do_action('hotel_luxury_main_slider');
 	    } else {
 
 		    $show = '';
-		    if ( is_singular('post') ) {
-			    $titlebar_title = esc_attr( get_theme_mod('blog_title', '') ) ;
-			    $titlebar_subtitle = esc_attr( get_theme_mod('blog_sub_title', '') ) ;
-			    $show = ( $show_titlebar_on_post == 1 ) ? true : false;
+
+            if ( is_singular(array( 'tribe_events', 'post', 'product') )  || hotel_luxury_is_event() == true ) {
+	            $show = true;
             }
-
-            elseif ( is_singular('tribe_events')  || hotel_luxury_is_event() == true ) {
-	            $titlebar_title = esc_attr( get_theme_mod('eventbar_title', '') ) ;
-	            $titlebar_subtitle = esc_attr( get_theme_mod('event_sub_title', '') ) ;
-	            $show = ( $show_titlebar_on_event == 1 ) ? true : false;
-            }
-
-            elseif ( hotel_luxury_is_wc() == true ) {
-			    $titlebar_title = esc_attr( get_theme_mod('product_title', '') ) ;
-			    $titlebar_subtitle = esc_attr( get_theme_mod('product_sub_title', '') ) ;
-			    $show = ( $show_titlebar_on_product == 1 ) ? true : false;
-		    }
-
-            else {
-			    $titlebar_title = get_post_meta( $page_id, '_titlebar_title', true);
-			    $titlebar_subtitle = get_post_meta( $page_id, '_titlebar_subtitle', true);
-            }
-
 
 		    if ( $show == true || $hide_title_bar != '1'  ) {
+			    $event_title =  esc_attr( get_theme_mod('eventbar_title', esc_html__( 'Events', 'hotel-luxury' ) )  ) ;
 			    ?>
                 <div class="titlebar-outer-wrapper" <?php echo $css; ?> >
-                    <div class="container">
-                        <div class="row">
-                            <div class="col-md-12">
-                                <?php if ( $titlebar_title ) : ?>
-                                <div class="titlebar-title">
-                                    <h1><?php echo $titlebar_title ?></h1>
-                                    <div class="titlebar-decs"><?php echo  $titlebar_subtitle; ?>
-                                    </div>
+
+                    <div class="titlebar-title">
+                                <h2>
+                                    <?php
+                                    if ( is_singular('tribe_events') ) {
+	                                    single_post_title();
+                                    } elseif ( hotel_luxury_is_event() == true ) {
+                                        echo $event_title;
+                                    }
+                                    else {
+	                                    echo get_the_title( $page_id );
+                                    }
+                                    ?>
+                                </h2>
+                                <div class="breadcrumbs">
+                                    <?php
+                                    if(function_exists('bcn_display' ) )
+	                                {
+		                                bcn_display();
+	                                }
+	                                ?>
                                 </div>
-                                <?php endif; ?>
-                            </div>
-                            <div class="clear"></div>
-                        </div>
                     </div>
-                    <div class="shadow-box"></div>
+
                 </div>
 			    <?php
 		    }

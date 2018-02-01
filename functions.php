@@ -205,7 +205,6 @@ function hotel_luxury_scripts() {
 	wp_enqueue_style( 'hotel-luxury-style', get_stylesheet_uri() );
 
 	wp_enqueue_script( 'jquery-magnific', get_template_directory_uri() . '/assets/js/jquery.magnific-popup.min.js', array( 'jquery' ), '1.1.0', true );
-	wp_enqueue_script( 'mixitup', get_template_directory_uri() . '/assets/js/mixitup.min.js', array( 'jquery' ), '3.2.1', true );
 	wp_enqueue_script( 'owl-carousel', get_template_directory_uri() . '/assets/js/owl.carousel.min.js', array( 'jquery' ), '2.2.1', true );
 	wp_enqueue_script( 'hotel-luxury-custom', get_template_directory_uri() . '/assets/js/custom.js', array( 'jquery' ), '20151215', true );
 

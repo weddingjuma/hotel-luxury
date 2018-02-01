@@ -33,144 +33,7 @@ function hotel_luxury_customize_register( $wp_customize ) {
 		'title' => esc_html__( 'Theme Options', 'hotel-luxury' )
 	));
 
-	$wp_customize->add_panel( 'titlebar', array(
-		'title' => esc_html__( 'Title Bar', 'hotel-luxury' )
-	));
 
-
-
-
-
-	// Event
-	$wp_customize->add_section( 'event', array(
-		'title' => esc_html__( 'Single Event', 'hotel-luxury' ),
-		'panel' => 'titlebar'
-	));
-	$wp_customize->add_setting( 'show_titlebar_on_event', array(
-		'sanitize_callback' => 'hotel_luxury_checkbox_sanitize',
-		'default'           => '1'
-	) );
-
-	$wp_customize->add_control( 'show_titlebar_on_event',
-		array(
-			'type'        => 'checkbox',
-			'label'       => esc_html__('Show Titlebar on single event page', 'hotel-luxury'),
-			'section'     => 'event',
-			'description' => ''
-		)
-	);
-	$wp_customize->add_setting( 'eventbar_title', array(
-		'sanitize_callback' => 'sanitize_text_field',
-		'default'           => esc_html__( 'Events', 'hotel-luxury' )
-	) );
-
-	$wp_customize->add_control( 'eventbar_title',
-		array(
-			'label'       => esc_html__('Main Title', 'hotel-luxury'),
-			'section'     => 'event',
-			'description' => ''
-		)
-	);
-	$wp_customize->add_setting( 'event_sub_title', array(
-		'sanitize_callback' => 'sanitize_text_field',
-		'default'           => ''
-	) );
-
-	$wp_customize->add_control( 'event_sub_title',
-		array(
-			'label'       => esc_html__('Sub Title', 'hotel-luxury'),
-			'section'     => 'event',
-			'description' => ''
-		)
-	);
-
-	// Product
-	$wp_customize->add_section( 'product', array(
-		'title' => esc_html__( 'Single Product', 'hotel-luxury' ),
-		'panel' => 'titlebar'
-	));
-	$wp_customize->add_setting( 'show_titlebar_on_product', array(
-		'sanitize_callback' => 'hotel_luxury_checkbox_sanitize',
-		'default'           => '1'
-	) );
-
-	$wp_customize->add_control( 'show_titlebar_on_product',
-		array(
-			'type'        => 'checkbox',
-			'label'       => esc_html__('Show Titlebar on single product page', 'hotel-luxury'),
-			'section'     => 'product',
-			'description' => ''
-		)
-	);
-	$wp_customize->add_setting( 'product_title', array(
-		'sanitize_callback' => 'sanitize_text_field',
-		'default'           => ''
-	) );
-
-	$wp_customize->add_control( 'product_title',
-		array(
-			'label'       => esc_html__('Main Title', 'hotel-luxury'),
-			'section'     => 'product',
-			'description' => ''
-		)
-	);
-	$wp_customize->add_setting( 'product_sub_title', array(
-		'sanitize_callback' => 'sanitize_text_field',
-		'default'           => ''
-	) );
-
-	$wp_customize->add_control( 'product_sub_title',
-		array(
-			'label'       => esc_html__('Sub Title', 'hotel-luxury'),
-			'section'     => 'product',
-			'description' => ''
-		)
-	);
-
-
-	// Blog
-	$wp_customize->add_section( 'blog', array(
-		'title' => esc_html__( 'Single Post', 'hotel-luxury' ),
-		'panel' => 'titlebar'
-	));
-	$wp_customize->add_setting( 'show_titlebar_on_post', array(
-		'sanitize_callback' => 'hotel_luxury_checkbox_sanitize',
-		'default'           => '1'
-	) );
-
-	$wp_customize->add_control( 'show_titlebar_on_post',
-		array(
-			'type'        => 'checkbox',
-			'label'       => esc_html__('Show Titlebar on single post', 'hotel-luxury'),
-			'section'     => 'blog',
-			'description' => ''
-		)
-	);
-
-	$wp_customize->add_setting( 'blog_title', array(
-		'sanitize_callback' => 'sanitize_text_field',
-		'default'           => esc_html__( 'News', 'hotel-luxury' )
-	) );
-
-	$wp_customize->add_control( 'blog_title',
-		array(
-			'label'       => esc_html__('Main Title', 'hotel-luxury'),
-			'section'     => 'blog',
-			'description' => ''
-		)
-	);
-	$wp_customize->add_setting( 'blog_sub_title', array(
-		'sanitize_callback' => 'sanitize_text_field',
-		'default'           => ''
-	) );
-
-	$wp_customize->add_control( 'blog_sub_title',
-		array(
-			'label'       => esc_html__('Sub Title', 'hotel-luxury'),
-			'section'     => 'blog',
-			'description' => ''
-		)
-	);
 
 
 	// Newsletter
@@ -325,6 +188,22 @@ function hotel_luxury_customize_register( $wp_customize ) {
 		)
 	);
 
+	// Event
+	$wp_customize->add_section( 'event', array(
+		'title' => esc_html__( 'Event Title', 'hotel-luxury' ),
+		'panel' => 'theme_options'
+	));
+	$wp_customize->add_setting( 'eventbar_title', array(
+		'sanitize_callback' => 'sanitize_text_field',
+		'default'           => esc_html__( 'Events', 'hotel-luxury' )
+	) );
+	$wp_customize->add_control( 'eventbar_title',
+		array(
+			'label'       => esc_html__('Main Title', 'hotel-luxury'),
+			'section'     => 'event',
+			'description' => ''
+		)
+	);
 	// Checkbox Sanitize
 	function hotel_luxury_checkbox_sanitize( $input ) {
 		if ( $input == 1 ) {

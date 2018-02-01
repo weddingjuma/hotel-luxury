@@ -36,14 +36,6 @@ class Hotel_Luxury_MetaBox {
 				'high'
 			);
 
-			add_meta_box(
-				'hotel_luxury_titlebar_settings',
-				__( 'Titlebar Settings', 'hotel-luxury' ),
-				array( $this, 'render_titlebar_meta_box_content' ),
-				$post_type,
-				'normal',
-				'high'
-			);
 		}
 	}
 	/**
@@ -93,20 +85,7 @@ class Hotel_Luxury_MetaBox {
 			update_post_meta( $post_id, '_'.$key, sanitize_text_field( $value ) );
 		}
 
-		$titlebar_title = isset( $_POST['hotel_luxury_titlebar_title'] ) ? sanitize_text_field( $_POST['hotel_luxury_titlebar_title'] ) : '';
-		$titlebar_subtitle = isset( $_POST['hotel_luxury_titlebar_subtitle'] ) ? sanitize_text_field( $_POST['hotel_luxury_titlebar_subtitle'] ) : '';
 
-		if ( $titlebar_title  ) {
-			update_post_meta( $post_id, '_titlebar_title', $titlebar_title );
-        } else {
-			update_post_meta( $post_id, '_titlebar_title', '' );
-        }
-
-		if ( $titlebar_subtitle  ) {
-			update_post_meta( $post_id, '_titlebar_subtitle', $titlebar_subtitle );
-		} else {
-			update_post_meta( $post_id, '_titlebar_subtitle', '' );
-        }
 	}
 	/**
 	 * Render Meta Box content.
@@ -147,24 +126,4 @@ class Hotel_Luxury_MetaBox {
 		<?php
 	}
 
-	public  function  render_titlebar_meta_box_content( $post ) {
-        $titlebar_title = get_post_meta( $post->ID, '_titlebar_title', true);
-		$titlebar_subtitle = get_post_meta( $post->ID, '_titlebar_subtitle', true);
-	    ?>
-        <p>
-            <label>
-	            <?php _e( 'Titlebar Title', 'hotel-luxury' ); ?><br>
-                <input type="input" class="regular-text" name="hotel_luxury_titlebar_title"  value="<?php echo esc_attr( $titlebar_title ) ?>" >
-            </label>
-        </p>
-
-        <p>
-            <label>
-	            <?php _e( 'Titlebar Sub Title', 'hotel-luxury' ); ?><br>
-                <input type="input" class="regular-text" name="hotel_luxury_titlebar_subtitle" value="<?php echo esc_attr( $titlebar_subtitle ) ?>" >
-            </label>
-        </p>
-
-        <?php
-    }
 }
