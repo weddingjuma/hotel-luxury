@@ -50,6 +50,11 @@ Screenshot images licensed under CC0 Public Domain (http://creativecommons.org/p
 
 
 === Changelog ===
+Version 0.0.8
+* Fixed theme review
+* Remove mixitup.js
+
+
 Version 0.0.5
 * Fixed theme review
 * Remove mixitup JS
