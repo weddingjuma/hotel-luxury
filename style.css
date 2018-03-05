@@ -1160,20 +1160,31 @@ p.buttons{margin-bottom: 0;}
     -webkit-transition:.5s;
 }
 
-.btn.small{padding:3px 12px;font-size: 11px;}
-.btn.large{padding:13px 33px;font-size: 14px;}
-
-
-.btn_brown{background-color: #BCA474;}
-.btn_green{background-color: #80b500;}
-.btn_red{background-color: #C62020;}
-.btn_pink{background-color: #C71C77;}
-.btn_orange{background-color: #FA5B0F;}
-.btn_yellow{background-color: #FFB400;}
-.btn_cyan{background-color: #37B6BD;}
-.btn_purple{background-color: #6957AF;}
-.btn_gray{background-color: #808080;}
-.btn_celadon{background-color: #74AEA1;}
+#to-top {
+    position: fixed;
+    bottom: 25px;
+    right: 25px;
+    z-index: 9999;
+    width: 35px;
+    height: 35px;
+    text-align: center;
+    line-height: 30px;
+    background: #bca474;
+    color: #fff;
+    cursor: pointer;
+    border: 0;
+    border-radius: 2px;
+    text-decoration: none;
+    transition: opacity 0.2s ease-out;
+    opacity: 0;
+    font-size: 20px;
+}
+#to-top:hover {
+    background: #000;
+}
+#to-top.show {
+    opacity: 1;
+}
 
 
 @media ( max-width: 991px) {

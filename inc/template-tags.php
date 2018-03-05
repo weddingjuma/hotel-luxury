@@ -173,6 +173,9 @@ function hotel_luxury_custom_style(){
 	$copyright_bg_color = esc_attr( get_theme_mod( 'footer_copyright_color', '222222' ) );
 	$copyright_text_color = esc_attr( get_theme_mod( 'copyright_text_color', '666' ) );
 
+	$totop_color = esc_attr( get_theme_mod( 'totop_color', 'bca474' ) );
+	$totop_hover = esc_attr( get_theme_mod( 'totop_hover_color', '000000' ) );
+
 	$css .= ".site-footer { background: #{$footer_bg_color}; }
 			.site-footer, .site-footer a, .widget-container .footer-widgettitle { color: #{$footer_text_color}; }
 			.footer-copyright-wrapper { background: #{$copyright_bg_color}; }
@@ -189,6 +192,9 @@ function hotel_luxury_custom_style(){
 			input[type=\"reset\"], input[type=\"submit\"], input[type=\"button\"], button {
 				background: #{$primary_color};
 			}
+			
+			#to-top { background: {$totop_color};}
+			#to-top:hover { background: {$totop_hover};}
 	";
 
 	return $css;

@@ -81,6 +81,8 @@
 
     </footer> <!-- END .footer-outer-wrapper -->
 
+    <a href="#top" id="to-top" title="Back to top"><i class="fa fa-angle-up"></i></a>
+
 </div><!-- #page -->
 
 <?php wp_footer(); ?>

@@ -204,6 +204,24 @@ function hotel_luxury_customize_register( $wp_customize ) {
 			'description' => ''
 		)
 	);
+
+	$wp_customize->add_setting( 'totop_color', array(
+		'default' 			     => '#bca474',
+		'sanitize_callback'		 => 'sanitize_hex_color'
+	) );
+	$wp_customize->add_control( new WP_Customize_Color_Control( $wp_customize, 'totop_color', array(
+		'label' 				 => esc_html__( 'Back To Top Color', 'hotel-luxury' ),
+		'section' 				 => 'colors',
+	) ) );
+	$wp_customize->add_setting( 'totop_hover_color', array(
+		'default' 			     => '#000000',
+		'sanitize_callback'		 => 'sanitize_hex_color'
+	) );
+	$wp_customize->add_control( new WP_Customize_Color_Control( $wp_customize, 'totop_hover_color', array(
+		'label' 				 => esc_html__( 'Back To Top Hover Color', 'hotel-luxury' ),
+		'section' 				 => 'colors',
+	) ) );
+
 	// Checkbox Sanitize
 	function hotel_luxury_checkbox_sanitize( $input ) {
 		if ( $input == 1 ) {
