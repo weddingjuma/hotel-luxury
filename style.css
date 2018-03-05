@@ -769,23 +769,101 @@ body.no-titlebar .main-outer-wrapper {margin-top: 30px;}
 .share-articles ul li a:hover{color:#333333;}
 .share-articles h5{margin-right: 10px;}
 
-#comments{padding-bottom:10px;}
-.comments-list{margin:0px;}
-.comments-list li{list-style-type:none;margin-bottom:0px;}
-.comment-item{padding:20px 20px;background: #f6f6f6;margin-bottom:20px;}
-.comment-item .comment-avatar{float:left;margin-right:18px;width:60px;height:60px;-webkit-border-radius: 120px;-moz-border-radius: 120px;border-radius: 120px;}
-.comment-header{padding-bottom:20px;border-bottom:1px solid #e5e5e5;overflow: hidden;}
-.comment-content{border-top: 1px solid #fff;padding-top:13px;}
-.comment-header-right{overflow: hidden;}
-a.comment-reply-link{float:right;}
-.comment-date{font-style: italic;color:#A2A2A2;margin-bottom:6px;margin-top:3px;}
-.comment-author{font-size: 15px;color:#333333;}
-ul.children{margin-left:30px;}
+#comments {
+    padding-bottom: 10px;
+    border-top: 1px solid #eee;
+    margin-top: 30px;
+    padding-top: 30px;
+}
+
+.comments-title {
+    text-transform: uppercase;
+}
+
+.comment-list {
+    margin: 0;
+}
+
+.comment-list li {
+    list-style-type: none;
+    margin-bottom: 0;
+}
+
+#comments .comment {
+    list-style: none;
+    margin: 30px 0;
+}
+#comments .comment .children {
+    padding-left: 30px;
+}
+#comments .comment .avatar {
+    width: 60px;
+    float: left;
+    -webkit-border-radius: 3px;
+    -moz-border-radius: 3px;
+    border-radius: 3px;
+}
+#comments .comment .comment-wrapper {
+    margin-left: 90px;
+    padding: 25px 30px 15px 30px;
+    background: #f8f9f9;
+    position: relative;
+}
+#comments .comment .comment-wrapper:before {
+    border-color: transparent #f6f7f9 transparent transparent;
+    border-style: solid;
+    border-width: 0 10px 10px 0;
+    content: "";
+    height: 0;
+    left: -9px;
+    position: absolute;
+    top: 0;
+    width: 0;
+}
+#comments .comment .comment-wrapper .comment-meta {
+    margin-bottom: 20px;
+}
+#comments .comment .comment-wrapper .comment-meta cite .fn {
+    font-weight: normal;
+    font-style: normal;
+    margin-right: 15px;
+}
+#comments .comment .comment-wrapper cite span {
+    text-transform: uppercase;
+    font-size: 11px;
+    margin-right: 15px;
+}
+#comments .comment .comment-wrapper .comment-meta .comment-time, #comments .comment .comment-wrapper .comment-meta .comment-reply-link, #comments .comment .comment-wrapper .comment-meta .comment-edit-link {
+    color: #bbb;
+    text-transform: uppercase;
+    letter-spacing: 0.3px;
+    font-size: 11px;
+}
+#comments .comment .comment-wrapper .comment-meta .comment-time:after, #comments .comment .comment-wrapper .comment-meta .comment-reply-link:after, #comments .comment .comment-wrapper .comment-meta .comment-edit-link:after {
+    content: "/";
+    padding: 0px 5px;
+    padding: 0px 0.5rem;
+}
+
 /* Comment Form */
-.form-line{margin-bottom:20px;}
-label span{color:red;}
-.form-line input{width:320px;border:none;padding:10px;background: #ececec;color:#555555}
-.form-line textarea{width:70%;background: #ececec;padding:10px;min-height: 200px;border:none;color:#555555}
+
+.form-line {
+    margin-bottom: 20px;
+}
+
+label span {
+    color: red;
+}
+
+#respond p:not(.form-submit) input {
+    padding: 10px;
+    color: #555555;
+}
+
+#respond textarea {
+    padding: 10px;
+    color: #555555;
+}
 #submit{}
 #submit:hover{background: #333333;}
 
