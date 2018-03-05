@@ -28,4 +28,8 @@
         <?php the_content() ; ?>
     </div>
 
+    <div class="entry-footer">
+		<?php hotel_luxury_entry_footer() ; ?>
+    </div>
+
 </article><!-- #post-<?php the_ID(); ?> -->

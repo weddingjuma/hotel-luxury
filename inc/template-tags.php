@@ -34,7 +34,7 @@ if ( ! function_exists( 'hotel_luxury_posted_on' ) ) :
 			'<span class="author vcard"><a class="url fn n" href="' . esc_url( get_author_posts_url( get_the_author_meta( 'ID' ) ) ) . '">' . esc_html( get_the_author() ) . '</a></span>'
 		);
 
-		echo '<span class="blog-date"><i class="icon-time"></i>' . $posted_on . '</span><span class="blog-author"><i class="icon-user"></i> ' . $byline . '</span>'; // WPCS: XSS OK.
+		echo '<span class="blog-date"><i class="fa fa-clock-o"></i>' . $posted_on . '</span><span class="blog-author"><i class="fa fa-user"></i> ' . $byline . '</span>'; // WPCS: XSS OK.
 
 	}
 endif;
@@ -50,7 +50,7 @@ if ( ! function_exists( 'hotel_luxury_entry_footer' ) ) :
 			$categories_list = get_the_category_list( esc_html__( ', ', 'hotel-luxury' ) );
 			if ( $categories_list ) {
 				/* translators: 1: list of categories. */
-				printf( '<span class="cat-links">' . esc_html__( 'Posted in %1$s', 'hotel-luxury' ) . '</span>', $categories_list ); // WPCS: XSS OK.
+				printf( '<span class="cat-links">' . esc_html__( 'Categories %1$s', 'hotel-luxury' ) . '</span>', $categories_list ); // WPCS: XSS OK.
 			}
 
 			/* translators: used between list items, there is a space after the comma */
@@ -80,22 +80,6 @@ if ( ! function_exists( 'hotel_luxury_entry_footer' ) ) :
 			echo '</span>';
 		}
 
-		edit_post_link(
-			sprintf(
-				wp_kses(
-					/* translators: %s: Name of current post. Only visible to screen readers */
-					__( 'Edit <span class="screen-reader-text">%s</span>', 'hotel-luxury' ),
-					array(
-						'span' => array(
-							'class' => array(),
-						),
-					)
-				),
-				get_the_title()
-			),
-			'<span class="edit-link">',
-			'</span>'
-		);
 	}
 endif;
 

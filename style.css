@@ -1,6 +1,8 @@
 /*!
 Theme Name: Hotel Luxury
+Theme URI: http://filathemes.com/hotel-luxury
 Author: FilaThemes
+Author URI: http://filathemes.com/
 Version: 0.0.8
 License: GNU General Public License v2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
@@ -931,7 +933,18 @@ a.banner-more:hover{color:#fff;}
 .blog-title{margin-bottom: 9px;}
 .blog-title a{color:#333333;}
 .blog-title a:hover{color:#BCA474;}
-
+.entry-footer {
+    display: block;
+    border-top: 1px solid #eee;
+    padding-top: 30px;
+    text-transform: uppercase;
+    letter-spacing: 1.5px;
+    font-size: 12px;
+    font-weight: 600;
+}
+.entry-footer > span {
+    display: block;
+}
 
 /* Sidebar.
 ----------------------------------------------------------------------------------------*/
@@ -1246,7 +1259,7 @@ p.buttons{margin-bottom: 0;}
     width: 35px;
     height: 35px;
     text-align: center;
-    line-height: 30px;
+    line-height: 35px;
     background: #bca474;
     color: #fff;
     cursor: pointer;
