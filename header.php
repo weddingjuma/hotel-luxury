@@ -33,12 +33,12 @@
                         <div class="top-bar-left pull-left">
                             <nav id="top-nav-id" class="top-nav slideMenu">
     	                        <?php
-    
-                                wp_nav_menu( array(
-                                    'theme_location' => 'topbar',
-                                    'menu_id'        => 'topbar-menu'
-                                ) );
-    
+                                if ( has_nav_menu('topbar-menu') ) {
+	                                wp_nav_menu( array(
+		                                'theme_location' => 'topbar',
+		                                'menu_id'        => 'topbar-menu'
+	                                ) );
+                                }
     	                        ?>
                             </nav>
                         </div>

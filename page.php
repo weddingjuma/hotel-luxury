@@ -13,12 +13,21 @@
  */
 
 get_header();
+
+$page_layout = esc_attr( get_theme_mod('page_layout', 'right-sidebar') );
+$col = ( $page_layout == 'no-sidebar' ) ? 12 : 8;
 ?>
 
    <?php do_action('hotel_luxury_page_before_content'); ?>
 
     <div id="primary" class="content-area row">
-        <div class="content-wrapper col-md-8">
+
+	    <?php if ( $page_layout != 'no-sidebar' && $page_layout == 'left-sidebar') { ?>
+		    <?php get_sidebar() ; ?>
+	    <?php } ?>
+
+
+        <div class="content-wrapper col-md-<?php echo $col; ?>">
             <main id="main" class="site-main">
 
 				<?php
@@ -32,7 +41,9 @@ get_header();
             </main><!-- #main -->
         </div>
 
+	    <?php if ( $page_layout != 'no-sidebar' && $page_layout == 'right-sidebar' ) { ?>
 		<?php get_sidebar() ; ?>
+        <?php } ?>
 
     </div><!-- #primary -->
 
