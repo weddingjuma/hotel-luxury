@@ -104,5 +104,18 @@ function hotel_luxury_one_activation_admin_notice(){
 /* activation notice */
 add_action( 'load-themes.php',  'hotel_luxury_one_activation_admin_notice'  );
 
+function hotel_luxury_review_notice(){
+	global $pagenow;
 
-?>
+	if ( is_admin() && 'themes.php' == $pagenow  ) {
+		?>
+        <span id="footer-thankyou">
+                <?php
+                $reviewurl = 'https://wordpress.org/support/theme/hotel-luxury/reviews/#new-post';
+                printf( __( 'You have been using <b>Hotel Luxury</b> theme, do you like it? If so, please leave us a review with your feedback! <a href="%s" target="_blank">Leave A Review</a>', 'hotel-luxury' ), esc_url( $reviewurl ) );
+                ?>
+        </span>
+		<?php
+	}
+}
+add_filter('admin_footer_text', 'hotel_luxury_review_notice');
