@@ -48,6 +48,7 @@ function hotel_luxury_theme_info_page() {
 
 		<h2 class="nav-tab-wrapper">
 			<a href="?page=hotel_luxury" class="nav-tab<?php echo is_null($tab) ? ' nav-tab-active' : null; ?>"><?php echo $theme_data->Name; ?></a>
+            <a href="<?php echo esc_url( add_query_arg( array( 'page'=>'hotel_luxury', 'tab' => 'free_pro' ), admin_url( 'themes.php' ) ) ); ?>" class="nav-tab<?php echo $tab == 'free_pro' ? ' nav-tab-active' : null; ?>"><?php esc_html_e( 'Free vs PRO', 'hotel-luxury' ); ?></span></a>
 		</h2>
 
 		<?php if ( is_null($tab) ) { ?>
@@ -79,7 +80,151 @@ function hotel_luxury_theme_info_page() {
 		<?php } ?>
 
 
-	</div> <!-- END .theme_info -->
+		<?php if ( $tab == 'free_pro' ) { ?>
+            <div id="free_pro" class="freepro-tab-content info-tab-content">
+                <table class="free-pro-table">
+                    <thead><tr><th></th><th>Free</th><th> PRO</th></tr></thead>
+                    <tbody>
+                    <tr>
+                        <td>
+                            <h4>Responsive Design</h4>
+                        </td>
+                        <td class="only-lite"><span class="dashicons-before dashicons-yes"></span></td>
+                        <td class="only-lite"><span class="dashicons-before dashicons-yes"></span></td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <h4>Translation Ready</h4>
+                        </td>
+                        <td class="only-lite"><span class="dashicons-before dashicons-yes"></span></td>
+                        <td class="only-lite"><span class="dashicons-before dashicons-yes"></span></td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <h4>Upload Your Own Logo</h4>
+                        </td>
+                        <td class="only-lite"><span class="dashicons-before dashicons-yes"></span></td>
+                        <td class="only-lite"><span class="dashicons-before dashicons-yes"></span></td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <h4>Home Slider</h4>
+                        </td>
+                        <td class="only-lite"><span class="dashicons-before dashicons-yes"></span></td>
+                        <td class="only-lite"><span class="dashicons-before dashicons-yes"></span></td>
+                    </tr>
+
+                    <tr>
+                        <td>
+                            <h4>Sidebar Layout</h4>
+                        </td>
+                        <td class="only-lite"><span class="dashicons-before dashicons-yes"></span></td>
+                        <td class="only-lite"><span class="dashicons-before dashicons-yes"></span></td>
+                    </tr>
+
+                    <tr>
+                        <td>
+                            <h4>Footer Background Color</h4>
+                        </td>
+                        <td class="only-lite"><span class="dashicons-before dashicons-yes"></span></td>
+                        <td class="only-lite"><span class="dashicons-before dashicons-yes"></span></td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <h4>Social Icons</h4>
+                        </td>
+                        <td class="only-lite"><span class="dashicons-before dashicons-yes"></span></td>
+                        <td class="only-lite"><span class="dashicons-before dashicons-yes"></span></td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <h4>Retina Logo</h4>
+                        </td>
+                        <td class="only-pro"><span class="dashicons-before dashicons-no-alt"></span></td>
+                        <td class="only-lite"><span class="dashicons-before dashicons-yes"></span></td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <h4>Sticky Header</h4>
+                        </td>
+                        <td class="only-pro"><span class="dashicons-before dashicons-no-alt"></span></td>
+                        <td class="only-lite"><span class="dashicons-before dashicons-yes"></span></td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <h4>Social Icons Color</h4>
+                        </td>
+                        <td class="only-pro"><span class="dashicons-before dashicons-no-alt"></span></td>
+                        <td class="only-lite"><span class="dashicons-before dashicons-yes"></span></td>
+                    </tr>
+
+                    <tr>
+                        <td>
+                            <h4>600+ Google fonts</h4>
+                        </td>
+                        <td class="only-pro"><span class="dashicons-before dashicons-no-alt"></span></td>
+                        <td class="only-lite"><span class="dashicons-before dashicons-yes"></span></td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <h4>Reservation Form</h4>
+                        </td>
+                        <td class="only-pro"><span class="dashicons-before dashicons-no-alt"></span></td>
+                        <td class="only-lite"><span class="dashicons-before dashicons-yes"></span></td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <h4>Portfolio Post Type</h4>
+                        </td>
+                        <td class="only-pro"><span class="dashicons-before dashicons-no-alt"></span></td>
+                        <td class="only-lite"><span class="dashicons-before dashicons-yes"></span></td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <h4>Portfolio/Room Filterable & Carousel</h4>
+                        </td>
+                        <td class="only-pro"><span class="dashicons-before dashicons-no-alt"></span></td>
+                        <td class="only-lite"><span class="dashicons-before dashicons-yes"></span></td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <h4>Room Services</h4>
+                        </td>
+                        <td class="only-pro"><span class="dashicons-before dashicons-no-alt"></span></td>
+                        <td class="only-lite"><span class="dashicons-before dashicons-yes"></span></td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <h4>Page/Post Titlebar settings</h4>
+                        </td>
+                        <td class="only-pro"><span class="dashicons-before dashicons-no-alt"></span></td>
+                        <td class="only-lite"><span class="dashicons-before dashicons-yes"></span></td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <h4>Footer Copyright & Layout</h4>
+                        </td>
+                        <td class="only-pro"><span class="dashicons-before dashicons-no-alt"></span></td>
+                        <td class="only-lite"><span class="dashicons-before dashicons-yes"></span></td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <h4>24/7 Priority Support</h4>
+                        </td>
+                        <td class="only-pro"><span class="dashicons-before dashicons-no-alt"></span></td>
+                        <td class="only-lite"><span class="dashicons-before dashicons-yes"></span></td>
+                    </tr>
+
+
+                    <tr class="ti-about-page-text-center"><td></td><td colspan="2"><a href="http://filathemes.com/hotel-luxury-pro/" target="_blank" class="button button-primary button-hero">Get Pro now!</a></td></tr>
+                    </tbody>
+                </table>
+            </div>
+		<?php } ?>
+
+
+
+    </div> <!-- END .theme_info -->
 
 	<?php
 }
@@ -112,7 +257,7 @@ function hotel_luxury_review_notice(){
         <span id="footer-thankyou">
                 <?php
                 $reviewurl = 'https://wordpress.org/support/theme/hotel-luxury/reviews/#new-post';
-                printf( __( 'You have been using <b>Hotel Luxury</b> theme, do you like it? If so, please leave us a review with your feedback! <a href="%s" target="_blank">Leave A Review</a>', 'hotel-luxury' ), esc_url( $reviewurl ) );
+                printf( __( 'You have been using <b>Hotel Luxury</b> theme, do you like it? If so, please leave us <a href="%s" target="_blank">a review</a> with your feedback. Thank you!', 'hotel-luxury' ), esc_url( $reviewurl ) );
                 ?>
         </span>
 		<?php
