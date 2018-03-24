@@ -262,6 +262,41 @@ function hotel_luxury_customize_register( $wp_customize ) {
 		'section' 				 => 'colors',
 	) ) );
 
+	$wp_customize->add_section( 'hotel_luxury_pro' ,
+		array(
+			'title'       => esc_html__( 'Upgrade to Pro', 'hotel-luxury' ),
+			'description' => '',
+			'priority'     => 399
+		)
+	);
+	$wp_customize->add_setting( 'hotel_pro_features', array(
+		'sanitize_callback' => 'sanitize_text_field',
+	) );
+	$wp_customize->add_control(
+		new Hotel_Luxury_Customize_Pro_Control(
+			$wp_customize,
+			'hotel_pro_features',
+			array(
+				'label'      => esc_html__( 'Hotel Luxury Pro Features', 'hotel-luxury' ),
+				'description'   => '<span>Retina Logo</span><span>Sticky Header</span><span>600+ Google Fonts</span><span>Social Media Color</span><span>Instagram/Flickr Widget</span><span>Reservation Form</span><span>Portfolio Post Type</span><span>Demo Data</span><span>Footer Widget Layout</span><span>Footer Copyright Editor</span><span>... and much more </span>',
+				'section'    => 'hotel_luxury_pro',
+			)
+		)
+	);
+	$wp_customize->add_setting( 'hotel_pro_links', array(
+		'sanitize_callback' => 'sanitize_text_field',
+	) );
+	$wp_customize->add_control(
+		new Hotel_Luxury_Customize_Pro_Control(
+			$wp_customize,
+			'hotel_pro_links',
+			array(
+				'description'   => '<a target="_blank" class="hotel-pro-buy-button" href="https://goo.gl/QLkFPU">Buy Now</a>', 'hotel-luxury',
+				'section'    => 'hotel_luxury_pro',
+			)
+		)
+	);
+
 	// Checkbox Sanitize
 	function hotel_luxury_checkbox_sanitize( $input ) {
 		if ( $input == 1 ) {
@@ -308,3 +343,11 @@ function hotel_luxury_customize_preview_js() {
 	wp_enqueue_script( 'hotel-luxury-customizer', get_template_directory_uri() . '/assets//js/customizer.js', array( 'customize-preview' ), '20151215', true );
 }
 add_action( 'customize_preview_init', 'hotel_luxury_customize_preview_js' );
+
+/**
+ * Load customizer css
+ */
+function hotel_luxury_customizer_load_css(){
+	wp_enqueue_style( 'hotel-customizer', get_template_directory_uri() . '/assets/css/customizer.css' );
+}
+add_action('customize_controls_print_styles', 'hotel_luxury_customizer_load_css');

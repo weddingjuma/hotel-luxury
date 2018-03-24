@@ -67,7 +67,7 @@ function hotel_luxury_theme_info_page() {
 							<h3><?php esc_html_e( 'Theme Documentation', 'hotel-luxury' ); ?></h3>
 							<p class="about"><?php printf(esc_html__('Need any help to setup and configure %s? Please have a look at our documentations instructions.', 'hotel-luxury'), $theme_data->Name); ?></p>
 							<p>
-								<a href="http://filathemes.com/hotel-luxury/docs/" target="_blank" class="button button-secondary"><?php esc_html_e('Online Documentation', 'hotel-luxury'); ?></a>
+								<a href="http://filathemes.com/docs/" target="_blank" class="button button-secondary"><?php esc_html_e('Online Documentation', 'hotel-luxury'); ?></a>
 							</p>
 						</div>
 					</div>
@@ -152,6 +152,13 @@ function hotel_luxury_theme_info_page() {
                     </tr>
                     <tr>
                         <td>
+                            <h4>Custom Widgets</h4>
+                        </td>
+                        <td class="only-pro"><span class="dashicons-before dashicons-no-alt"></span></td>
+                        <td class="only-lite"><span class="dashicons-before dashicons-yes"></span></td>
+                    </tr>
+                    <tr>
+                        <td>
                             <h4>Social Icons Color</h4>
                         </td>
                         <td class="only-pro"><span class="dashicons-before dashicons-no-alt"></span></td>
@@ -216,7 +223,7 @@ function hotel_luxury_theme_info_page() {
                     </tr>
 
 
-                    <tr class="ti-about-page-text-center"><td></td><td colspan="2"><a href="http://filathemes.com/hotel-luxury-pro/" target="_blank" class="button button-primary button-hero">Get Pro now!</a></td></tr>
+                    <tr class="ti-about-page-text-center"><td></td><td colspan="2"><a href="https://goo.gl/HhrVZZ" target="_blank" class="button button-primary button-hero">Get Pro now!</a></td></tr>
                     </tbody>
                 </table>
             </div>

@@ -3,7 +3,7 @@ Hotel Luxury, Copyright 2018 FilaThemes
 Hotel Luxury is distributed under the terms of the GNU GPL
 
 == Description ==
-Hotel Luxury is the most charming, luxurious and powerful WordPress theme for your spa, resort, hotel business, vacation room/apartment rental services. Its original goal is to help you easier manage your rooms listings, customer bookings and reservations online. With its beautiful design, and high coding quality, this theme can showcase your unique accommodations to the world and attract more visitors to your website. See our demo: http://filathemes.com/hotel-luxury/ and documentation: http://filathemes.com/hotel-luxury/docs/
+Hotel Luxury is the most charming, luxurious and powerful WordPress theme for your spa, resort, hotel business, vacation room/apartment rental services. Its original goal is to help you easier manage your rooms listings, customer bookings and reservations online. With its beautiful design, and high coding quality, this theme can showcase your unique accommodations to the world and attract more visitors to your website. See our demo: http://demos.filathemes.com/hotel-luxury/ and documentation: http://filathemes.com/docs/
 
 == Installation ==
 
@@ -50,6 +50,13 @@ Screenshot images licensed under CC0 Public Domain (http://creativecommons.org/p
 
 
 === Changelog ===
+Version 1.0.0
+* Add page layout
+* Add back to top button
+* Update post comment css
+* Update post tag
+
+
 Version 0.0.8
 * Fixed theme review
 * Remove mixitup.js
